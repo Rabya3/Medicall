@@ -19,7 +19,18 @@ namespace Medicall_Forms
 
         private void Pregbtn_Click(object sender, EventArgs e)
         {
-            
+            server.Service1 server = new server.Service1();
+            bool validuser;
+            bool passed;
+            server.Pregister(Pnametxt.Text, Ppasstxt.Text, Pcpasstxt.Text, PcomboBox1.Text, Panstxt.Text, out validuser, out passed);
+            if (validuser == true)
+            {
+                MessageBox.Show("You're Registered");
+            }
+            else
+            {
+                MessageBox.Show("Invalid info / Info Missing");
+            }
         }
 
     }

@@ -24,7 +24,14 @@ namespace WcfService1
 
         [OperationContract]
         bool Drisvalid(string username, string password);
-   
+
+        [OperationContract]
+        bool Pregister(string username, string password, string cpassword, string question, string answer);
+        [OperationContract]
+        bool Pisvalid(string username, string password);
+
+
+
 
 
 

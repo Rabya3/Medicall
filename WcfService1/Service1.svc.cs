@@ -44,7 +44,20 @@ namespace WcfService1
             return Drisvalid;
         }
 
+        public bool Pregister(string username, string password, string cpassword, string question, string answer)
+        {
+            PatientDL Pt = new PatientDL();
+            bool P = Pt.Pregister(username, password, cpassword, question, answer);
+            return P;
+        }
 
+        public bool Pisvalid(string username, string password)
+        {
+            PatientDL Pt = new PatientDL();
+            bool Pisvalid = Pt.Pisvalid(username, password);
+            return Pisvalid;
+
+        }
 
 
     }
