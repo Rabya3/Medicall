@@ -8,6 +8,7 @@ namespace WcfService1
     public class PatientDL
     {
         public static List<Patient> Pat = new List<Patient>();
-
+        
+        
     }
 }

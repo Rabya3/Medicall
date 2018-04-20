@@ -7,11 +7,12 @@ namespace WcfService1
 {
     public class Patient
     {
-        public string pusername;
-        public string ppassword;
-        public string pquestion;
-        public string panswer;
-        public string plocation;
+        private string pusername;
+        private string ppassword;
+        private string pcpassword;
+        private string pquestion;
+        private string panswer;
+        private string plocation;
 
         public string Pusername
         {
@@ -75,6 +76,19 @@ namespace WcfService1
             set
             {
                 plocation = value;
+            }
+        }
+
+        public string Pcpassword
+        {
+            get
+            {
+                return pcpassword;
+            }
+
+            set
+            {
+                pcpassword = value;
             }
         }
     }

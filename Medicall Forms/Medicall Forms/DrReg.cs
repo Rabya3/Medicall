@@ -20,10 +20,10 @@ namespace Medicall_Forms
         private void Dregbtn_Click(object sender, EventArgs e)
         {
             bool isvalid;
-           
-            bool cpassword;
+
+            bool passed;
             server.Service1 server = new server.Service1();
-            server.Dregister(Dnametxt.Text, Dpasstxt.Text,Dcpasstxt.Text, DcomboBox1.Text, Danstxt.Text,out isvalid,out cpassword);
+            server.Dregister(Dnametxt.Text, Dpasstxt.Text,Dcpasstxt.Text, DcomboBox1.Text, Danstxt.Text,out isvalid,out passed);
             if(isvalid==true)
             {
                 MessageBox.Show("You're Registered as Doctor");

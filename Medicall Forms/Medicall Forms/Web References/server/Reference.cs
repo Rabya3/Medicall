@@ -37,6 +37,10 @@ namespace Medicall_Forms.server {
         
         private System.Threading.SendOrPostCallback DrisvalidOperationCompleted;
         
+        private System.Threading.SendOrPostCallback PregisterOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PisvalidOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -86,6 +90,12 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public event DrisvalidCompletedEventHandler DrisvalidCompleted;
+        
+        /// <remarks/>
+        public event PregisterCompletedEventHandler PregisterCompleted;
+        
+        /// <remarks/>
+        public event PisvalidCompletedEventHandler PisvalidCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -216,6 +226,76 @@ namespace Medicall_Forms.server {
             if ((this.DrisvalidCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.DrisvalidCompleted(this, new DrisvalidCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Pregister", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Pregister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string cpassword, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, out bool PregisterResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool PregisterResultSpecified) {
+            object[] results = this.Invoke("Pregister", new object[] {
+                        username,
+                        password,
+                        cpassword,
+                        question,
+                        answer});
+            PregisterResult = ((bool)(results[0]));
+            PregisterResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void PregisterAsync(string username, string password, string cpassword, string question, string answer) {
+            this.PregisterAsync(username, password, cpassword, question, answer, null);
+        }
+        
+        /// <remarks/>
+        public void PregisterAsync(string username, string password, string cpassword, string question, string answer, object userState) {
+            if ((this.PregisterOperationCompleted == null)) {
+                this.PregisterOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPregisterOperationCompleted);
+            }
+            this.InvokeAsync("Pregister", new object[] {
+                        username,
+                        password,
+                        cpassword,
+                        question,
+                        answer}, this.PregisterOperationCompleted, userState);
+        }
+        
+        private void OnPregisterOperationCompleted(object arg) {
+            if ((this.PregisterCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PregisterCompleted(this, new PregisterCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Pisvalid", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Pisvalid([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool PisvalidResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool PisvalidResultSpecified) {
+            object[] results = this.Invoke("Pisvalid", new object[] {
+                        username,
+                        password});
+            PisvalidResult = ((bool)(results[0]));
+            PisvalidResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void PisvalidAsync(string username, string password) {
+            this.PisvalidAsync(username, password, null);
+        }
+        
+        /// <remarks/>
+        public void PisvalidAsync(string username, string password, object userState) {
+            if ((this.PisvalidOperationCompleted == null)) {
+                this.PisvalidOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPisvalidOperationCompleted);
+            }
+            this.InvokeAsync("Pisvalid", new object[] {
+                        username,
+                        password}, this.PisvalidOperationCompleted, userState);
+        }
+        
+        private void OnPisvalidOperationCompleted(object arg) {
+            if ((this.PisvalidCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PisvalidCompleted(this, new PisvalidCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -398,6 +478,74 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public bool DrisvalidResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void PregisterCompletedEventHandler(object sender, PregisterCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PregisterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PregisterCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool PregisterResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool PregisterResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void PisvalidCompletedEventHandler(object sender, PisvalidCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PisvalidCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PisvalidCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool PisvalidResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool PisvalidResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

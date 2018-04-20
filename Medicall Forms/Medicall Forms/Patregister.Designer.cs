@@ -240,7 +240,7 @@
             this.linkLabel3.TabIndex = 64;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Home";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            
             // 
             // Loginlabel
             // 
@@ -253,7 +253,7 @@
             this.Loginlabel.TabIndex = 65;
             this.Loginlabel.TabStop = true;
             this.Loginlabel.Text = "Login";
-            this.Loginlabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Loginlabel_LinkClicked);
+            
             // 
             // Patregister
             // 

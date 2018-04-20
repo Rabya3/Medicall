@@ -22,16 +22,11 @@ namespace Medicall_Forms
             
         }
 
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           
-        }
-
-        private void Loginlabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Login l = new Login();
-            l.Show();
-            this.Hide();
-        }
     }
+
+    
+
+      
+    
+
 }

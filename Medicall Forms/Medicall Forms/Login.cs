@@ -27,16 +27,24 @@ namespace Medicall_Forms
             
             server.Service1 server = new server.Service1();
             bool validuser;
-            bool password;
-            server.Drisvalid(textBox1.Text, textBox2.Text, out validuser, out password);
-            if(validuser == true)
+            bool passed;
+            if (checkBox1.Checked && checkBox2.Checked)
             {
-                MessageBox.Show("Login Successful");
-
+                validuser = false;
+                MessageBox.Show("Error; Please select one form");
             }
-            else
+            if (checkBox1.Checked)
             {
-                MessageBox.Show("Invalid User");
+                server.Drisvalid(textBox1.Text, textBox2.Text, out validuser, out passed);
+                if (validuser == true)
+                {
+                    MessageBox.Show("Login Successful as Doctor");
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid User");
+                }
             }
         }
 

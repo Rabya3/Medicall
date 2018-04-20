@@ -42,9 +42,10 @@ namespace WcfService1
             DoctorDL dr = new DoctorDL();
             bool Drisvalid = dr.Drisvalid(username, password);
             return Drisvalid;
-
         }
-  
+
+
+
 
     }
 }
