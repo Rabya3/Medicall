@@ -19,7 +19,13 @@ namespace WcfService1
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        
+        [OperationContract]
+        bool Dregister(string username, string password, string cpassword, string question, string answer);
+
+        [OperationContract]
+        bool Drisvalid(string username, string password);
+
+
 
         // TODO: Add your service operations here
     }

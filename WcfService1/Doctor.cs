@@ -7,14 +7,15 @@ namespace WcfService1
 {
     public class Doctor
     {
-        public string dusername;
-        public string dpassword;
-        public string dquestion;
-        public string danswer;
-        public string dlocation;
-        public string dspecialization;
-        public string day;
-        public string time;
+        private string dusername;
+        private string dpassword;
+        private string dcpassword;
+        private string dquestion;
+        private string danswer;
+        private string dlocation;
+        private string dspecialization;
+        private string day;
+        private string dtime;
 
         public string Dusername
         {
@@ -42,16 +43,16 @@ namespace WcfService1
             }
         }
 
-        public string Dquestion
+        public string Dcpassword
         {
             get
             {
-                return dquestion;
+                return dcpassword;
             }
 
             set
             {
-                dquestion = value;
+                dcpassword = value;
             }
         }
 
@@ -107,16 +108,29 @@ namespace WcfService1
             }
         }
 
-        public string Time
+        public string Dtime
         {
             get
             {
-                return time;
+                return dtime;
             }
 
             set
             {
-                time = value;
+                dtime = value;
+            }
+        }
+
+        public string Dquestion
+        {
+            get
+            {
+                return dquestion;
+            }
+
+            set
+            {
+                dquestion = value;
             }
         }
     }

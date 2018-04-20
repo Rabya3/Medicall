@@ -30,6 +30,21 @@ namespace WcfService1
             return composite;
         }
 
+        public bool Dregister(string username, string password, string cpassword, string question, string answer)
+        {
+            DoctorDL Dr = new DoctorDL();
+            bool Dregister = Dr.Dregister(username, password, cpassword, question, answer);
+            return Dregister;
+        }
+
+        public bool Drisvalid(string username, string password)
+        {
+            DoctorDL dr = new DoctorDL();
+            bool Drisvalid = dr.Drisvalid(username, password);
+            return Drisvalid;
+
+        }
+  
 
     }
 }
