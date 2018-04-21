@@ -47,7 +47,20 @@ namespace WcfService1
             }
             return isfound;
         }
+        public bool Preset(string username, string question, string answer, string password)
+        {
+            bool valid = false;
+            foreach (Patient u in PatientDL.Pat)
+            {
+                if (u.Pusername == username && u.Pquestion == question && u.Panswer == answer)
+                {
+                    u.Ppassword = password;
+                    valid = true;
+                }
+            }
+            return valid;
 
+        }
 
     }
 }

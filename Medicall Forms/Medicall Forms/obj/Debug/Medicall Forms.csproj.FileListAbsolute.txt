@@ -62,3 +62,6 @@ C:\Users\rabya\Desktop\rabia\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Fo
 C:\Users\rabya\Desktop\rabia\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Register.resources
 C:\Users\rabya\Desktop\rabia\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.reset.resources
 C:\Users\rabya\Desktop\rabia\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.csproj.GenerateResource.Cache
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\Medicall Forms.exe.config
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.exe
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.pdb

@@ -29,6 +29,10 @@ namespace WcfService1
         bool Pregister(string username, string password, string cpassword, string question, string answer);
         [OperationContract]
         bool Pisvalid(string username, string password);
+        [OperationContract]
+        bool Dreset(string username, string question, string answer, string password);
+        [OperationContract]
+        bool Preset(string username, string question, string answer, string password);
 
 
 

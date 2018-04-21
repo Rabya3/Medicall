@@ -58,6 +58,18 @@ namespace WcfService1
             return Pisvalid;
 
         }
+        public bool Dreset(string username, string question, string answer, string password)
+        {
+            DoctorDL Dr = new DoctorDL();
+            bool D = Dr.Dreset(username, question, answer, password);
+            return D;
+        }
+        public bool Preset(string username, string question, string answer, string password)
+        {
+            PatientDL P = new PatientDL();
+            bool Pt = P.Preset(username, question, answer, password);
+            return Pt;
+        }
 
 
     }

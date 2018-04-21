@@ -47,7 +47,20 @@ namespace WcfService1
             }
             return isfound;
         }
+        public bool Dreset(string username, string question, string answer, string password)
+        {
+            bool valid = false;
+            foreach (Doctor u in DoctorDL.Doc)
+            {
+                if (u.Dusername == username && u.Dquestion == question && u.Danswer == answer)
+                {
+                    u.Dpassword = password;
+                    valid = true;
+                }
+            }
+            return valid;
 
+        }
 
 
     }

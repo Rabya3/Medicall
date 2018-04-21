@@ -44,6 +44,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Loginlabel = new System.Windows.Forms.LinkLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // linkLabel3
@@ -169,7 +173,7 @@
             this.resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.resetbtn.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.resetbtn.Location = new System.Drawing.Point(474, 325);
+            this.resetbtn.Location = new System.Drawing.Point(514, 349);
             this.resetbtn.Name = "resetbtn";
             this.resetbtn.Size = new System.Drawing.Size(120, 43);
             this.resetbtn.TabIndex = 33;
@@ -218,7 +222,7 @@
             this.Loginlabel.AutoSize = true;
             this.Loginlabel.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Loginlabel.LinkColor = System.Drawing.Color.Navy;
-            this.Loginlabel.Location = new System.Drawing.Point(133, 335);
+            this.Loginlabel.Location = new System.Drawing.Point(124, 369);
             this.Loginlabel.Name = "Loginlabel";
             this.Loginlabel.Size = new System.Drawing.Size(57, 23);
             this.Loginlabel.TabIndex = 42;
@@ -226,12 +230,55 @@
             this.Loginlabel.Text = "Login";
             this.Loginlabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(319, 294);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(149, 26);
+            this.textBox1.TabIndex = 46;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Navy;
+            this.label7.Location = new System.Drawing.Point(123, 293);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 26);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Password";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(316, 354);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(59, 17);
+            this.checkBox2.TabIndex = 48;
+            this.checkBox2.Text = "Patient";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(319, 326);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(58, 17);
+            this.checkBox1.TabIndex = 47;
+            this.checkBox1.Text = "Doctor";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // reset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(724, 431);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Loginlabel);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label8);
@@ -273,5 +320,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.LinkLabel Loginlabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
