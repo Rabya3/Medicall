@@ -40,11 +40,8 @@ C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.contact.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.DrReg.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Form1.resources
-C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Login.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Patregister.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Properties.Resources.resources
-C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Register.resources
-C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.reset.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.csproj.GenerateResource.Cache
 C:\Users\rabya\Desktop\rabia\Medicall Forms\Medicall Forms\bin\Debug\Medicall Forms.exe.config
 C:\Users\rabya\Desktop\rabia\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.exe
@@ -65,3 +62,7 @@ C:\Users\rabya\Desktop\rabia\Medicall Forms\Medicall Forms\obj\Debug\Medicall Fo
 C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\Medicall Forms.exe.config
 C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.exe
 C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.pdb
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Dlogin.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Preset.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Plogin.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Dreset.resources

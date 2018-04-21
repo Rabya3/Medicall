@@ -64,12 +64,14 @@ namespace WcfService1
             bool D = Dr.Dreset(username, question, answer, password);
             return D;
         }
+
         public bool Preset(string username, string question, string answer, string password)
         {
             PatientDL P = new PatientDL();
             bool Pt = P.Preset(username, question, answer, password);
             return Pt;
         }
+
 
 
     }

@@ -1,6 +1,6 @@
 ﻿namespace Medicall_Forms
 {
-    partial class reset
+    partial class Dreset
     {
         /// <summary>
         /// Required designer variable.
@@ -46,8 +46,6 @@
             this.Loginlabel = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // linkLabel3
@@ -139,6 +137,7 @@
             this.label6.Size = new System.Drawing.Size(117, 26);
             this.label6.TabIndex = 37;
             this.label6.Text = "User-Name";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -150,6 +149,7 @@
             this.label5.Size = new System.Drawing.Size(79, 26);
             this.label5.TabIndex = 36;
             this.label5.Text = "Answer";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // ransertxt
             // 
@@ -158,6 +158,7 @@
             this.ransertxt.Name = "ransertxt";
             this.ransertxt.Size = new System.Drawing.Size(149, 26);
             this.ransertxt.TabIndex = 35;
+            this.ransertxt.TextChanged += new System.EventHandler(this.ransertxt_TextChanged);
             // 
             // rnametxt
             // 
@@ -166,6 +167,7 @@
             this.rnametxt.Name = "rnametxt";
             this.rnametxt.Size = new System.Drawing.Size(149, 26);
             this.rnametxt.TabIndex = 34;
+            this.rnametxt.TextChanged += new System.EventHandler(this.rnametxt_TextChanged);
             // 
             // resetbtn
             // 
@@ -202,6 +204,7 @@
             this.label8.Size = new System.Drawing.Size(156, 26);
             this.label8.TabIndex = 40;
             this.label8.Text = "Secret Question";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // comboBox1
             // 
@@ -216,6 +219,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(149, 24);
             this.comboBox1.TabIndex = 41;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Loginlabel
             // 
@@ -233,50 +237,30 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(319, 294);
+            this.textBox1.Location = new System.Drawing.Point(319, 307);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(149, 26);
             this.textBox1.TabIndex = 46;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(123, 293);
+            this.label7.Location = new System.Drawing.Point(123, 307);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 26);
+            this.label7.Size = new System.Drawing.Size(143, 26);
             this.label7.TabIndex = 45;
-            this.label7.Text = "Password";
+            this.label7.Text = "New Password";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(316, 354);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(59, 17);
-            this.checkBox2.TabIndex = 48;
-            this.checkBox2.Text = "Patient";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(319, 326);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(58, 17);
-            this.checkBox1.TabIndex = 47;
-            this.checkBox1.Text = "Doctor";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // reset
+            // Dreset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(724, 431);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Loginlabel);
@@ -295,7 +279,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
-            this.Name = "reset";
+            this.Name = "Dreset";
             this.Text = "reset";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -322,7 +306,5 @@
         private System.Windows.Forms.LinkLabel Loginlabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

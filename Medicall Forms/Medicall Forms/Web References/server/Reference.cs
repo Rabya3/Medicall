@@ -41,6 +41,10 @@ namespace Medicall_Forms.server {
         
         private System.Threading.SendOrPostCallback PisvalidOperationCompleted;
         
+        private System.Threading.SendOrPostCallback DresetOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback PresetOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -96,6 +100,12 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public event PisvalidCompletedEventHandler PisvalidCompleted;
+        
+        /// <remarks/>
+        public event DresetCompletedEventHandler DresetCompleted;
+        
+        /// <remarks/>
+        public event PresetCompletedEventHandler PresetCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -296,6 +306,78 @@ namespace Medicall_Forms.server {
             if ((this.PisvalidCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.PisvalidCompleted(this, new PisvalidCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Dreset", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Dreset([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool DresetResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DresetResultSpecified) {
+            object[] results = this.Invoke("Dreset", new object[] {
+                        username,
+                        question,
+                        answer,
+                        password});
+            DresetResult = ((bool)(results[0]));
+            DresetResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void DresetAsync(string username, string question, string answer, string password) {
+            this.DresetAsync(username, question, answer, password, null);
+        }
+        
+        /// <remarks/>
+        public void DresetAsync(string username, string question, string answer, string password, object userState) {
+            if ((this.DresetOperationCompleted == null)) {
+                this.DresetOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDresetOperationCompleted);
+            }
+            this.InvokeAsync("Dreset", new object[] {
+                        username,
+                        question,
+                        answer,
+                        password}, this.DresetOperationCompleted, userState);
+        }
+        
+        private void OnDresetOperationCompleted(object arg) {
+            if ((this.DresetCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DresetCompleted(this, new DresetCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Preset", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Preset([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool PresetResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool PresetResultSpecified) {
+            object[] results = this.Invoke("Preset", new object[] {
+                        username,
+                        question,
+                        answer,
+                        password});
+            PresetResult = ((bool)(results[0]));
+            PresetResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void PresetAsync(string username, string question, string answer, string password) {
+            this.PresetAsync(username, question, answer, password, null);
+        }
+        
+        /// <remarks/>
+        public void PresetAsync(string username, string question, string answer, string password, object userState) {
+            if ((this.PresetOperationCompleted == null)) {
+                this.PresetOperationCompleted = new System.Threading.SendOrPostCallback(this.OnPresetOperationCompleted);
+            }
+            this.InvokeAsync("Preset", new object[] {
+                        username,
+                        question,
+                        answer,
+                        password}, this.PresetOperationCompleted, userState);
+        }
+        
+        private void OnPresetOperationCompleted(object arg) {
+            if ((this.PresetCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.PresetCompleted(this, new PresetCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -546,6 +628,74 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public bool PisvalidResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void DresetCompletedEventHandler(object sender, DresetCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DresetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DresetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool DresetResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool DresetResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void PresetCompletedEventHandler(object sender, PresetCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class PresetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal PresetCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool PresetResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool PresetResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

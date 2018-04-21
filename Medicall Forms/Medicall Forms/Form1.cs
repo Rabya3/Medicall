@@ -66,19 +66,79 @@ namespace Medicall_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Register R = new Register();
-            R.Show();
-            this.Hide();
+            bool valid;
+            if(checkBox1.Checked && checkBox2.Checked)
+            {
+                valid = false;
+                if (valid == false)
+                {
+                    MessageBox.Show("Please select one box");
+                }   
+            }
+            else
+            {
+                valid = true;
+                if (checkBox1.Checked && valid==true && !checkBox2.Checked)
+                {
+                         DrReg R = DrReg.getinstance();
+                        R.Show();
+                        this.Hide();    
+                }
+                if (checkBox2.Checked && valid == true && !checkBox1.Checked)
+                {
+                 
+                        Patregister P = Patregister.getinstance();
+                        P.Show();
+                        this.Hide();
+                    
+                }
+            }
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Login L = new Login();
-            L.Show();
-            this.Hide();
+            bool valid;
+            if (checkBox1.Checked && checkBox2.Checked)
+            {
+                valid = false;
+                if (valid == false)
+                {
+                    MessageBox.Show("Please select one box");
+                }
+            }
+            else
+            {
+                valid = true;
+                if (checkBox1.Checked && valid == true && !checkBox2.Checked)
+                {
+                    Dlogin R = Dlogin.getinstance();
+                    R.Show();
+                    this.Hide();
+                }
+                if (checkBox2.Checked && valid == true && !checkBox1.Checked)
+                {
+
+                    Plogin P = Plogin.getinstance();
+                    P.Show();
+                    this.Hide();
+
+                }
+            }
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

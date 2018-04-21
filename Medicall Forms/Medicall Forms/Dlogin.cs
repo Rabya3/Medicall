@@ -10,13 +10,22 @@ using System.Windows.Forms;
 
 namespace Medicall_Forms
 {
-    public partial class Login : Form
+    public partial class Dlogin : Form
     {
-        public Login()
+        public Dlogin()
         {
             InitializeComponent();
         }
+        private static Dlogin Dlog_frm;
+        public static Dlogin getinstance()
+        {
+            if (Dlog_frm == null)
+            {
+                Dlog_frm = new Dlogin();
+            }
 
+            return Dlog_frm;
+        }
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -24,18 +33,10 @@ namespace Medicall_Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
             server.Service1 server = new server.Service1();
             bool validuser;
             bool passed;
-            if (checkBox1.Checked && checkBox2.Checked)
-            {
-                validuser = false;
-                MessageBox.Show("Error; Please select one form");
-            }
-            if (checkBox1.Checked)
-            {
-                server.Drisvalid(textBox1.Text, textBox2.Text, out validuser, out passed);
+            server.Drisvalid(textBox1.Text, textBox2.Text, out validuser, out passed);
                 if (validuser == true)
                 {
                     MessageBox.Show("Login Successful as Doctor");
@@ -45,7 +46,8 @@ namespace Medicall_Forms
                 {
                     MessageBox.Show("Invalid User");
                 }
-            }
+            textBox1.Text = " ";
+            textBox2.Text = " ";
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -58,7 +60,7 @@ namespace Medicall_Forms
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            reset r = new reset();
+            Dreset r =Dreset.getinstance();
             r.Show();
             this.Hide();
         }

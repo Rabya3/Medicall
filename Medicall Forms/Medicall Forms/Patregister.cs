@@ -16,23 +16,57 @@ namespace Medicall_Forms
         {
             InitializeComponent();
         }
+        private static Patregister Preg_frm;
+        public static Patregister getinstance()
+        {
+            if (Preg_frm == null)
+            {
+                Preg_frm = new Patregister();
+            }
+
+            return Preg_frm;
+        }
 
         private void Pregbtn_Click(object sender, EventArgs e)
-        {
+        {   
             server.Service1 server = new server.Service1();
-            bool validuser;
-            bool passed;
-            server.Pregister(Pnametxt.Text, Ppasstxt.Text, Pcpasstxt.Text, PcomboBox1.Text, Panstxt.Text, out validuser, out passed);
-            if (validuser == true)
+            if(checkBox1.Checked)
             {
-                MessageBox.Show("You're Registered");
+                bool validuser;
+                bool passed;
+                server.Pregister(Pnametxt.Text, Ppasstxt.Text, Pcpasstxt.Text, PcomboBox1.Text, Panstxt.Text, out validuser, out passed);
+                if (validuser == true)
+                {
+                    MessageBox.Show("You're Registered");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid info / Info Missing");
+                }
             }
             else
             {
-                MessageBox.Show("Invalid info / Info Missing");
+                MessageBox.Show("Please fill all boxes");
             }
+            
+            Pnametxt.Text = " ";
+            Ppasstxt.Text = " ";
+            Pcpasstxt.Text = " ";
+            Panstxt.Text = " ";
+
         }
 
+        private void Loginlabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Plogin p = Plogin.getinstance();
+            p.Show();
+            this.Hide(); 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     

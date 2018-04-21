@@ -72,11 +72,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Dlogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Dlogin.Designer.cs">
+      <DependentUpon>Dlogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Patregister.cs">
       <SubType>Form</SubType>
@@ -84,19 +84,25 @@
     <Compile Include="Patregister.Designer.cs">
       <DependentUpon>Patregister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preset.Designer.cs">
+      <DependentUpon>Preset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.cs">
+    <Compile Include="Plogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register.Designer.cs">
-      <DependentUpon>Register.cs</DependentUpon>
+    <Compile Include="Plogin.Designer.cs">
+      <DependentUpon>Plogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="reset.cs">
+    <Compile Include="Dreset.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reset.Designer.cs">
-      <DependentUpon>reset.cs</DependentUpon>
+    <Compile Include="Dreset.Designer.cs">
+      <DependentUpon>Dreset.cs</DependentUpon>
     </Compile>
     <Compile Include="Web References\server\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -115,11 +121,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Dlogin.resx">
+      <DependentUpon>Dlogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patregister.resx">
       <DependentUpon>Patregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preset.resx">
+      <DependentUpon>Preset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,11 +139,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Register.resx">
-      <DependentUpon>Register.cs</DependentUpon>
+    <EmbeddedResource Include="Plogin.resx">
+      <DependentUpon>Plogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reset.resx">
-      <DependentUpon>reset.cs</DependentUpon>
+    <EmbeddedResource Include="Dreset.resx">
+      <DependentUpon>Dreset.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

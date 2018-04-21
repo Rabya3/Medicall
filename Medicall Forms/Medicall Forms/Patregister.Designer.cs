@@ -47,6 +47,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.Loginlabel = new System.Windows.Forms.LinkLabel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Pregbtn
@@ -55,7 +56,7 @@
             this.Pregbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Pregbtn.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pregbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Pregbtn.Location = new System.Drawing.Point(338, 362);
+            this.Pregbtn.Location = new System.Drawing.Point(474, 372);
             this.Pregbtn.Name = "Pregbtn";
             this.Pregbtn.Size = new System.Drawing.Size(120, 43);
             this.Pregbtn.TabIndex = 63;
@@ -73,7 +74,7 @@
             "Which is your favourite color?"});
             this.PcomboBox1.Location = new System.Drawing.Point(338, 246);
             this.PcomboBox1.Name = "PcomboBox1";
-            this.PcomboBox1.Size = new System.Drawing.Size(121, 24);
+            this.PcomboBox1.Size = new System.Drawing.Size(148, 24);
             this.PcomboBox1.TabIndex = 62;
             // 
             // label9
@@ -240,7 +241,6 @@
             this.linkLabel3.TabIndex = 64;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Home";
-            
             // 
             // Loginlabel
             // 
@@ -253,7 +253,19 @@
             this.Loginlabel.TabIndex = 65;
             this.Loginlabel.TabStop = true;
             this.Loginlabel.Text = "Login";
-            
+            this.Loginlabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Loginlabel_LinkClicked);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(337, 332);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(187, 20);
+            this.checkBox1.TabIndex = 66;
+            this.checkBox1.Text = "I Agree with terms and conditions.";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Patregister
             // 
@@ -261,6 +273,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(719, 435);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Loginlabel);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.Pregbtn);
@@ -308,5 +321,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel Loginlabel;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

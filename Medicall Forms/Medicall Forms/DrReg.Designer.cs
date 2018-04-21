@@ -47,6 +47,7 @@
             this.Dregbtn = new System.Windows.Forms.Button();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.Loginlabel = new System.Windows.Forms.LinkLabel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // panel2
@@ -212,7 +213,7 @@
             "Which is your favourite color?"});
             this.DcomboBox1.Location = new System.Drawing.Point(349, 245);
             this.DcomboBox1.Name = "DcomboBox1";
-            this.DcomboBox1.Size = new System.Drawing.Size(121, 24);
+            this.DcomboBox1.Size = new System.Drawing.Size(148, 24);
             this.DcomboBox1.TabIndex = 43;
             // 
             // Dregbtn
@@ -255,12 +256,24 @@
             this.Loginlabel.Text = "Login";
             this.Loginlabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Loginlabel_LinkClicked);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(348, 329);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(187, 20);
+            this.checkBox1.TabIndex = 67;
+            this.checkBox1.Text = "I Agree with terms and conditions.";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // DrReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(710, 440);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Loginlabel);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.Dregbtn);
@@ -308,5 +321,6 @@
         private System.Windows.Forms.Button Dregbtn;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel Loginlabel;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

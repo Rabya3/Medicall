@@ -16,15 +16,27 @@ namespace Medicall_Forms
         {
             InitializeComponent();
         }
+        private static DrReg Dreg_frm;
+        public static DrReg getinstance()
+        {
+            if (Dreg_frm == null)
+            {
+                Dreg_frm = new DrReg();
+            }
+
+            return Dreg_frm;
+        }
 
         private void Dregbtn_Click(object sender, EventArgs e)
         {
-            bool isvalid;
-
-            bool passed;
             server.Service1 server = new server.Service1();
-            server.Dregister(Dnametxt.Text, Dpasstxt.Text,Dcpasstxt.Text, DcomboBox1.Text, Danstxt.Text,out isvalid,out passed);
-            if(isvalid==true)
+            if (checkBox1.Checked)
+            {
+            bool isvalid;
+            bool passed;
+            
+            server.Dregister(Dnametxt.Text, Dpasstxt.Text, Dcpasstxt.Text, DcomboBox1.Text, Danstxt.Text, out isvalid, out passed);
+            if (isvalid == true)
             {
                 MessageBox.Show("You're Registered as Doctor");
             }
@@ -32,7 +44,17 @@ namespace Medicall_Forms
             {
                 MessageBox.Show("Invalid info / Info Missing");
             }
+        }
+            else
+            {
+                MessageBox.Show("Please fill all boxes");
             }
+            Dnametxt.Text = " ";
+            Dpasstxt.Text = " ";
+            Dcpasstxt.Text = " ";
+            DcomboBox1.Text = " ";
+            Danstxt.Text = " ";
+        }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -43,7 +65,7 @@ namespace Medicall_Forms
 
         private void Loginlabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login l = new Login();
+            Dlogin l = Dlogin.getinstance();
             l.Show();
             this.Hide();
         }
