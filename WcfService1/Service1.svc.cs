@@ -71,7 +71,12 @@ namespace WcfService1
             bool Pt = P.Preset(username, question, answer, password);
             return Pt;
         }
-
+        public bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee)
+        {
+            DoctorDL Dr = new DoctorDL();
+            bool D = Dr.AddDoctor(username,phone,speciality,location,time,day,fee);
+            return D;
+        }
 
 
     }

@@ -60,6 +60,18 @@
     <Compile Include="contact.Designer.cs">
       <DependentUpon>contact.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocPortal.designer.cs">
+      <DependentUpon>DocPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drlogin.Designer.cs">
+      <DependentUpon>Drlogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="DrReg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,12 +83,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dlogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dlogin.Designer.cs">
-      <DependentUpon>Dlogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Patregister.cs">
       <SubType>Form</SubType>
@@ -115,14 +121,17 @@
     <EmbeddedResource Include="contact.resx">
       <DependentUpon>contact.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DocPortal.resx">
+      <DependentUpon>DocPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drlogin.resx">
+      <DependentUpon>Drlogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DrReg.resx">
       <DependentUpon>DrReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dlogin.resx">
-      <DependentUpon>Dlogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patregister.resx">
       <DependentUpon>Patregister.cs</DependentUpon>

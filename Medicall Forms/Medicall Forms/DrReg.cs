@@ -29,12 +29,11 @@ namespace Medicall_Forms
 
         private void Dregbtn_Click(object sender, EventArgs e)
         {
-            server.Service1 server = new server.Service1();
-            if (checkBox1.Checked)
-            {
             bool isvalid;
             bool passed;
-            
+            if (checkBox1.Checked)
+            {
+            server.Service1 server = new server.Service1();
             server.Dregister(Dnametxt.Text, Dpasstxt.Text, Dcpasstxt.Text, DcomboBox1.Text, Danstxt.Text, out isvalid, out passed);
             if (isvalid == true)
             {
@@ -44,7 +43,7 @@ namespace Medicall_Forms
             {
                 MessageBox.Show("Invalid info / Info Missing");
             }
-        }
+            }
             else
             {
                 MessageBox.Show("Please fill all boxes");
@@ -54,6 +53,8 @@ namespace Medicall_Forms
             Dcpasstxt.Text = " ";
             DcomboBox1.Text = " ";
             Danstxt.Text = " ";
+            checkBox1.Checked = false;
+                
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -65,7 +66,7 @@ namespace Medicall_Forms
 
         private void Loginlabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Dlogin l = Dlogin.getinstance();
+            Drlogin l = Drlogin.getinstance();
             l.Show();
             this.Hide();
         }

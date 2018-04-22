@@ -113,7 +113,7 @@ namespace Medicall_Forms
                 valid = true;
                 if (checkBox1.Checked && valid == true && !checkBox2.Checked)
                 {
-                    Dlogin R = Dlogin.getinstance();
+                    Drlogin R = Drlogin.getinstance();
                     R.Show();
                     this.Hide();
                 }

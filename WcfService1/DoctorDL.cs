@@ -11,11 +11,6 @@ namespace WcfService1
         public bool Dregister(string username, string password, string cpassword, string question, string answer)
         {
             bool valid;
-
-            if (!(password == cpassword))
-            {
-                valid = false;
-            }
             if (!username.Any(Char.IsLetter) || !answer.Any(Char.IsLetter))
             {
                 valid = false;
@@ -60,7 +55,30 @@ namespace WcfService1
             }
             return valid;
         }
-       
+    public bool AddDoctor(string username,string phone,string speciality,string location,string time,string day,string fee)
+        {
+            bool valid=false;
+            foreach(Doctor u in DoctorDL.Doc)
+            {
+                if(u.Dusername==username)
+                {   if(phone.Any(Char.IsLetter))
+                    {
+                        valid = false;
+                    }
+                else
+                    {
+                        u.Dphone = phone;
+                        u.Dspecialization = speciality;
+                        u.Dlocation = location;
+                        u.Dtime = time;
+                        u.Day = day;
+                        u.Dfee = fee;
+                        valid = true;
 
+                    }
+                }
+            }
+            return valid;
+        }
     }
 }

@@ -50,7 +50,7 @@ namespace Medicall_Forms
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Dlogin l = new Dlogin();
+            Drlogin l = Drlogin.getinstance();
             l.Show();
             this.Hide();
         }

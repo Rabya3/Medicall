@@ -16,6 +16,8 @@ namespace WcfService1
         private string dspecialization;
         private string day;
         private string dtime;
+        private string dphone;
+        private string dfee;
 
         public string Dusername
         {
@@ -131,6 +133,32 @@ namespace WcfService1
             set
             {
                 dquestion = value;
+            }
+        }
+
+        public string Dphone
+        {
+            get
+            {
+                return dphone;
+            }
+
+            set
+            {
+                dphone = value;
+            }
+        }
+
+        public string Dfee
+        {
+            get
+            {
+                return dfee;
+            }
+
+            set
+            {
+                dfee = value;
             }
         }
     }
