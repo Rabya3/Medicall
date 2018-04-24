@@ -58,7 +58,7 @@ namespace WcfService1
     public bool AddDoctor(string username,string phone,string speciality,string location,string time,string day,string fee)
         {
             bool valid=false;
-            foreach(Doctor u in DoctorDL.Doc)
+            foreach(Doctor u in Doc)
             {
                 if(u.Dusername==username)
                 {   if(phone.Any(Char.IsLetter))
