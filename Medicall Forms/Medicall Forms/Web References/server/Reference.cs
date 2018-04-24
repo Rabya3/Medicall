@@ -45,11 +45,13 @@ namespace Medicall_Forms.server {
         
         private System.Threading.SendOrPostCallback PresetOperationCompleted;
         
-        private System.Threading.SendOrPostCallback AddDoctorOperationCompleted;
-        
         private System.Threading.SendOrPostCallback UpdateinfoOperationCompleted;
         
         private System.Threading.SendOrPostCallback bregisterOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AregisterOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AddDoctorOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -114,13 +116,16 @@ namespace Medicall_Forms.server {
         public event PresetCompletedEventHandler PresetCompleted;
         
         /// <remarks/>
-        public event AddDoctorCompletedEventHandler AddDoctorCompleted;
-        
-        /// <remarks/>
         public event UpdateinfoCompletedEventHandler UpdateinfoCompleted;
         
         /// <remarks/>
         public event bregisterCompletedEventHandler bregisterCompleted;
+        
+        /// <remarks/>
+        public event AregisterCompletedEventHandler AregisterCompleted;
+        
+        /// <remarks/>
+        public event AddDoctorCompletedEventHandler AddDoctorCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -407,48 +412,6 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddDoctor", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void AddDoctor([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, out bool AddDoctorResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddDoctorResultSpecified) {
-            object[] results = this.Invoke("AddDoctor", new object[] {
-                        username,
-                        phone,
-                        speciality,
-                        location,
-                        time,
-                        day,
-                        fee});
-            AddDoctorResult = ((bool)(results[0]));
-            AddDoctorResultSpecified = ((bool)(results[1]));
-        }
-        
-        /// <remarks/>
-        public void AddDoctorAsync(string username, string phone, string speciality, string location, string time, string day, string fee) {
-            this.AddDoctorAsync(username, phone, speciality, location, time, day, fee, null);
-        }
-        
-        /// <remarks/>
-        public void AddDoctorAsync(string username, string phone, string speciality, string location, string time, string day, string fee, object userState) {
-            if ((this.AddDoctorOperationCompleted == null)) {
-                this.AddDoctorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddDoctorOperationCompleted);
-            }
-            this.InvokeAsync("AddDoctor", new object[] {
-                        username,
-                        phone,
-                        speciality,
-                        location,
-                        time,
-                        day,
-                        fee}, this.AddDoctorOperationCompleted, userState);
-        }
-        
-        private void OnAddDoctorOperationCompleted(object arg) {
-            if ((this.AddDoctorCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AddDoctorCompleted(this, new AddDoctorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Updateinfo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void Updateinfo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, out bool UpdateinfoResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateinfoResultSpecified) {
             object[] results = this.Invoke("Updateinfo", new object[] {
@@ -523,6 +486,80 @@ namespace Medicall_Forms.server {
             if ((this.bregisterCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.bregisterCompleted(this, new bregisterCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Aregister", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Aregister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool AregisterResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AregisterResultSpecified) {
+            object[] results = this.Invoke("Aregister", new object[] {
+                        username,
+                        password});
+            AregisterResult = ((bool)(results[0]));
+            AregisterResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void AregisterAsync(string username, string password) {
+            this.AregisterAsync(username, password, null);
+        }
+        
+        /// <remarks/>
+        public void AregisterAsync(string username, string password, object userState) {
+            if ((this.AregisterOperationCompleted == null)) {
+                this.AregisterOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAregisterOperationCompleted);
+            }
+            this.InvokeAsync("Aregister", new object[] {
+                        username,
+                        password}, this.AregisterOperationCompleted, userState);
+        }
+        
+        private void OnAregisterOperationCompleted(object arg) {
+            if ((this.AregisterCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AregisterCompleted(this, new AregisterCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddDoctor", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void AddDoctor([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, out bool AddDoctorResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddDoctorResultSpecified) {
+            object[] results = this.Invoke("AddDoctor", new object[] {
+                        username,
+                        phone,
+                        speciality,
+                        location,
+                        time,
+                        day,
+                        fee});
+            AddDoctorResult = ((bool)(results[0]));
+            AddDoctorResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void AddDoctorAsync(string username, string phone, string speciality, string location, string time, string day, string fee) {
+            this.AddDoctorAsync(username, phone, speciality, location, time, day, fee, null);
+        }
+        
+        /// <remarks/>
+        public void AddDoctorAsync(string username, string phone, string speciality, string location, string time, string day, string fee, object userState) {
+            if ((this.AddDoctorOperationCompleted == null)) {
+                this.AddDoctorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddDoctorOperationCompleted);
+            }
+            this.InvokeAsync("AddDoctor", new object[] {
+                        username,
+                        phone,
+                        speciality,
+                        location,
+                        time,
+                        day,
+                        fee}, this.AddDoctorOperationCompleted, userState);
+        }
+        
+        private void OnAddDoctorOperationCompleted(object arg) {
+            if ((this.AddDoctorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddDoctorCompleted(this, new AddDoctorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -850,40 +887,6 @@ namespace Medicall_Forms.server {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void AddDoctorCompletedEventHandler(object sender, AddDoctorCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AddDoctorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal AddDoctorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool AddDoctorResult {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public bool AddDoctorResultSpecified {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[1]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void UpdateinfoCompletedEventHandler(object sender, UpdateinfoCompletedEventArgs e);
     
     /// <remarks/>
@@ -943,6 +946,74 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public bool bregisterResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void AregisterCompletedEventHandler(object sender, AregisterCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AregisterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AregisterCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool AregisterResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool AregisterResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void AddDoctorCompletedEventHandler(object sender, AddDoctorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AddDoctorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AddDoctorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool AddDoctorResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool AddDoctorResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

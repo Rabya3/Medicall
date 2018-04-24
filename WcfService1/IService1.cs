@@ -33,15 +33,16 @@ namespace WcfService1
         bool Dreset(string username, string question, string answer, string password);
         [OperationContract]
         bool Preset(string username, string question, string answer, string password);
-        [OperationContract]
-        bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee);
+      
         [OperationContract]
         bool Updateinfo(string username, string phone, string speciality, string location, string time, string day, string fee);
         [OperationContract]
         bool bregister(string username, string contact, string group, string address);
         [OperationContract]
         bool Aregister(string username, string password);
-
+        [OperationContract]
+        bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee);
+         
 
 
 

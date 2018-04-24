@@ -55,12 +55,6 @@
   <wsdl:message name="IService1_Preset_OutputMessage">
     <wsdl:part name="parameters" element="tns:PresetResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_AddDoctor_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddDoctor" />
-  </wsdl:message>
-  <wsdl:message name="IService1_AddDoctor_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddDoctorResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_Updateinfo_InputMessage">
     <wsdl:part name="parameters" element="tns:Updateinfo" />
   </wsdl:message>
@@ -72,6 +66,18 @@
   </wsdl:message>
   <wsdl:message name="IService1_bregister_OutputMessage">
     <wsdl:part name="parameters" element="tns:bregisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Aregister_InputMessage">
+    <wsdl:part name="parameters" element="tns:Aregister" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Aregister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AregisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDoctor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDoctorResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
@@ -106,10 +112,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Preset" message="tns:IService1_Preset_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/PresetResponse" message="tns:IService1_Preset_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddDoctor">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddDoctor" message="tns:IService1_AddDoctor_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddDoctorResponse" message="tns:IService1_AddDoctor_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="Updateinfo">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updateinfo" message="tns:IService1_Updateinfo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateinfoResponse" message="tns:IService1_Updateinfo_OutputMessage" />
@@ -117,6 +119,14 @@
     <wsdl:operation name="bregister">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/bregister" message="tns:IService1_bregister_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/bregisterResponse" message="tns:IService1_bregister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Aregister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Aregister" message="tns:IService1_Aregister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AregisterResponse" message="tns:IService1_Aregister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddDoctor" message="tns:IService1_AddDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddDoctorResponse" message="tns:IService1_AddDoctor_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -193,15 +203,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddDoctor">
-      <soap:operation soapAction="http://tempuri.org/IService1/AddDoctor" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Updateinfo">
       <soap:operation soapAction="http://tempuri.org/IService1/Updateinfo" style="document" />
       <wsdl:input>
@@ -213,6 +214,24 @@
     </wsdl:operation>
     <wsdl:operation name="bregister">
       <soap:operation soapAction="http://tempuri.org/IService1/bregister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Aregister">
+      <soap:operation soapAction="http://tempuri.org/IService1/Aregister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDoctor">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddDoctor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

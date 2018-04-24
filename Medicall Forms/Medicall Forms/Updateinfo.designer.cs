@@ -143,6 +143,7 @@
             this.label3.Size = new System.Drawing.Size(102, 23);
             this.label3.TabIndex = 75;
             this.label3.Text = "Timings  🕐";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label7
             // 
@@ -154,6 +155,7 @@
             this.label7.Size = new System.Drawing.Size(67, 23);
             this.label7.TabIndex = 74;
             this.label7.Text = "Day  🎴";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label5
             // 
@@ -165,6 +167,7 @@
             this.label5.Size = new System.Drawing.Size(149, 23);
             this.label5.TabIndex = 72;
             this.label5.Text = "Specialization  💉";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label8
             // 
@@ -176,6 +179,7 @@
             this.label8.Size = new System.Drawing.Size(107, 23);
             this.label8.TabIndex = 76;
             this.label8.Text = "Location  🏠";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Pregbtn
             // 
@@ -207,6 +211,7 @@
             this.specialtxt.Size = new System.Drawing.Size(189, 24);
             this.specialtxt.TabIndex = 83;
             this.specialtxt.Text = "-Select your specialization";
+            this.specialtxt.SelectedIndexChanged += new System.EventHandler(this.specialtxt_SelectedIndexChanged);
             // 
             // locationtxt
             // 
@@ -223,6 +228,7 @@
             this.locationtxt.Size = new System.Drawing.Size(189, 24);
             this.locationtxt.TabIndex = 84;
             this.locationtxt.Text = "-Select a Place";
+            this.locationtxt.SelectedIndexChanged += new System.EventHandler(this.locationtxt_SelectedIndexChanged);
             // 
             // timingstxt
             // 
@@ -237,6 +243,7 @@
             this.timingstxt.Size = new System.Drawing.Size(189, 24);
             this.timingstxt.TabIndex = 85;
             this.timingstxt.Text = "-Select Timings";
+            this.timingstxt.SelectedIndexChanged += new System.EventHandler(this.timingstxt_SelectedIndexChanged);
             // 
             // daytxt
             // 
@@ -254,6 +261,7 @@
             this.daytxt.Size = new System.Drawing.Size(189, 24);
             this.daytxt.TabIndex = 86;
             this.daytxt.Text = "-Select a Day";
+            this.daytxt.SelectedIndexChanged += new System.EventHandler(this.daytxt_SelectedIndexChanged);
             // 
             // phonetxt
             // 
@@ -262,6 +270,7 @@
             this.phonetxt.Name = "phonetxt";
             this.phonetxt.Size = new System.Drawing.Size(189, 22);
             this.phonetxt.TabIndex = 87;
+            this.phonetxt.TextChanged += new System.EventHandler(this.phonetxt_TextChanged);
             // 
             // feetxt
             // 
@@ -289,6 +298,7 @@
             this.label10.Size = new System.Drawing.Size(62, 23);
             this.label10.TabIndex = 91;
             this.label10.Text = "Fee  💵";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label12
             // 
@@ -300,6 +310,7 @@
             this.label12.Size = new System.Drawing.Size(139, 23);
             this.label12.TabIndex = 93;
             this.label12.Text = "Contact No    📱\r\n";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label6
             // 
@@ -344,6 +355,7 @@
             this.label11.Size = new System.Drawing.Size(103, 23);
             this.label11.TabIndex = 99;
             this.label11.Text = "User-Name";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Dnametxt
             // 
@@ -352,6 +364,7 @@
             this.Dnametxt.Name = "Dnametxt";
             this.Dnametxt.Size = new System.Drawing.Size(149, 26);
             this.Dnametxt.TabIndex = 98;
+            this.Dnametxt.TextChanged += new System.EventHandler(this.Dnametxt_TextChanged);
             // 
             // Updateinfo
             // 
@@ -386,6 +399,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Name = "Updateinfo";
             this.Text = "DocPortal";
+            this.Load += new System.EventHandler(this.Updateinfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
