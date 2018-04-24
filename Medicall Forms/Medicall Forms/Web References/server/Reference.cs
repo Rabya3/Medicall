@@ -49,6 +49,8 @@ namespace Medicall_Forms.server {
         
         private System.Threading.SendOrPostCallback UpdateinfoOperationCompleted;
         
+        private System.Threading.SendOrPostCallback bregisterOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -116,6 +118,9 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public event UpdateinfoCompletedEventHandler UpdateinfoCompleted;
+        
+        /// <remarks/>
+        public event bregisterCompletedEventHandler bregisterCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -486,6 +491,42 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/bregister", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void bregister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string contact, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string group, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string address, out bool bregisterResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool bregisterResultSpecified) {
+            object[] results = this.Invoke("bregister", new object[] {
+                        username,
+                        contact,
+                        group,
+                        address});
+            bregisterResult = ((bool)(results[0]));
+            bregisterResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void bregisterAsync(string username, string contact, string group, string address) {
+            this.bregisterAsync(username, contact, group, address, null);
+        }
+        
+        /// <remarks/>
+        public void bregisterAsync(string username, string contact, string group, string address, object userState) {
+            if ((this.bregisterOperationCompleted == null)) {
+                this.bregisterOperationCompleted = new System.Threading.SendOrPostCallback(this.OnbregisterOperationCompleted);
+            }
+            this.InvokeAsync("bregister", new object[] {
+                        username,
+                        contact,
+                        group,
+                        address}, this.bregisterOperationCompleted, userState);
+        }
+        
+        private void OnbregisterOperationCompleted(object arg) {
+            if ((this.bregisterCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.bregisterCompleted(this, new bregisterCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -505,7 +546,7 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -868,6 +909,40 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public bool UpdateinfoResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void bregisterCompletedEventHandler(object sender, bregisterCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class bregisterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal bregisterCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool bregisterResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool bregisterResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

@@ -54,6 +54,12 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="blood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="blood.Designer.cs">
+      <DependentUpon>blood.cs</DependentUpon>
+    </Compile>
     <Compile Include="contact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blood.resx">
+      <DependentUpon>blood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="contact.resx">
       <DependentUpon>contact.cs</DependentUpon>

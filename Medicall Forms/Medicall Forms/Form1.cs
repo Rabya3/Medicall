@@ -142,5 +142,12 @@ namespace Medicall_Forms
         {
 
         }
+
+        private void Loginlabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            blood b = new blood();
+            b.Show();
+            this.Hide();
+        }
     }
 }

@@ -172,6 +172,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(752, 43);
             this.panel2.TabIndex = 45;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label4
             // 
@@ -183,6 +184,7 @@
             this.label4.Size = new System.Drawing.Size(181, 30);
             this.label4.TabIndex = 50;
             this.label4.Text = "It\'s calling your nearby Doctor!\r\n\r\n";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
@@ -194,6 +196,7 @@
             this.label2.Size = new System.Drawing.Size(70, 36);
             this.label2.TabIndex = 49;
             this.label2.Text = "Call";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -205,6 +208,7 @@
             this.label1.Size = new System.Drawing.Size(85, 36);
             this.label1.TabIndex = 48;
             this.label1.Text = "Medi";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // linkLabel2
             // 
@@ -241,6 +245,7 @@
             this.linkLabel3.TabIndex = 64;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Home";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // Loginlabel
             // 
@@ -272,7 +277,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(719, 435);
+            this.ClientSize = new System.Drawing.Size(719, 483);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Loginlabel);
             this.Controls.Add(this.linkLabel3);
@@ -295,6 +300,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Name = "Patregister";
             this.Text = "Patregister";
+            this.Load += new System.EventHandler(this.Patregister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

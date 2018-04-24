@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.Loginlabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -227,12 +228,26 @@
             this.label7.TabIndex = 41;
             this.label7.Text = "Already have an account?";
             // 
+            // Loginlabel
+            // 
+            this.Loginlabel.AutoSize = true;
+            this.Loginlabel.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loginlabel.LinkColor = System.Drawing.Color.Navy;
+            this.Loginlabel.Location = new System.Drawing.Point(466, 485);
+            this.Loginlabel.Name = "Loginlabel";
+            this.Loginlabel.Size = new System.Drawing.Size(261, 23);
+            this.Loginlabel.TabIndex = 66;
+            this.Loginlabel.TabStop = true;
+            this.Loginlabel.Text = "Do you want to Donate blood?";
+            this.Loginlabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Loginlabel_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(756, 477);
+            this.ClientSize = new System.Drawing.Size(756, 517);
+            this.Controls.Add(this.Loginlabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -272,6 +287,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel Loginlabel;
     }
 }
 

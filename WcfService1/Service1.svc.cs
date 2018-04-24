@@ -84,6 +84,13 @@ namespace WcfService1
             return D;
 
         }
+        public bool bregister(string username, string contact, string group, string address)
+        {
+            bloodreg Dr = new bloodreg();
+            bool D = Dr.bregister(username, contact, group, address);
+            return D;
+
+        }
 
     }
 }

@@ -37,6 +37,8 @@ namespace WcfService1
         bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee);
         [OperationContract]
         bool Updateinfo(string username, string phone, string speciality, string location, string time, string day, string fee);
+        [OperationContract]
+        bool bregister(string username, string contact, string group, string address);
 
 
 
