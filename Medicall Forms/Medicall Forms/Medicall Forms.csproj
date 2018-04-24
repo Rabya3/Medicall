@@ -60,11 +60,11 @@
     <Compile Include="contact.Designer.cs">
       <DependentUpon>contact.cs</DependentUpon>
     </Compile>
-    <Compile Include="DocPortal.cs">
+    <Compile Include="Updateinfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DocPortal.designer.cs">
-      <DependentUpon>DocPortal.cs</DependentUpon>
+    <Compile Include="Updateinfo.designer.cs">
+      <DependentUpon>Updateinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Drlogin.cs">
       <SubType>Form</SubType>
@@ -121,8 +121,8 @@
     <EmbeddedResource Include="contact.resx">
       <DependentUpon>contact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DocPortal.resx">
-      <DependentUpon>DocPortal.cs</DependentUpon>
+    <EmbeddedResource Include="Updateinfo.resx">
+      <DependentUpon>Updateinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drlogin.resx">
       <DependentUpon>Drlogin.cs</DependentUpon>

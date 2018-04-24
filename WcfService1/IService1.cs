@@ -20,7 +20,7 @@ namespace WcfService1
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        bool Dregister(string username, string password, string cpassword, string question, string answer);
+        bool Dregister(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day);
 
         [OperationContract]
         bool Drisvalid(string username, string password);
@@ -35,6 +35,8 @@ namespace WcfService1
         bool Preset(string username, string question, string answer, string password);
         [OperationContract]
         bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee);
+        [OperationContract]
+        bool Updateinfo(string username, string phone, string speciality, string location, string time, string day, string fee);
 
 
 

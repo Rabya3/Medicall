@@ -63,7 +63,7 @@ namespace Medicall_Forms
         {
             if(validcall==true)
             {
-                DocPortal P = DocPortal.getinstance();
+                Updateinfo P = Updateinfo.getinstance();
                 P.Show();
                 this.Hide();
                 MessageBox.Show("Signing you in!");

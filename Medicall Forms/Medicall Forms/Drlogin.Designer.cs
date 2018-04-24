@@ -201,12 +201,12 @@
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(528, 372);
+            this.linkLabel5.Location = new System.Drawing.Point(461, 371);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(49, 13);
+            this.linkLabel5.Size = new System.Drawing.Size(63, 13);
             this.linkLabel5.TabIndex = 48;
             this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Continue";
+            this.linkLabel5.Text = "Update Info";
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // Drlogin

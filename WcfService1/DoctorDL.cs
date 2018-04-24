@@ -8,7 +8,7 @@ namespace WcfService1
     public class DoctorDL
     {
         public static List<Doctor> Doc = new List<Doctor>();
-        public bool Dregister(string username, string password, string cpassword, string question, string answer)
+        public bool Dregister(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day)
         {
             bool valid;
             if (!username.Any(Char.IsLetter) || !answer.Any(Char.IsLetter))
@@ -20,9 +20,14 @@ namespace WcfService1
                 Doctor D = new Doctor();
                 D.Dusername = username;
                 D.Dpassword = password;
-                D.Dcpassword = cpassword;
                 D.Dquestion = question;
                 D.Danswer = answer;
+                D.Dspecialization = speciality;
+                D.Dphone = phone;
+                D.Dlocation = location;
+                D.Day = day;
+                D.Dfee = fee;
+                D.Dtime = time;
                 DoctorDL.Doc.Add(D);
                 valid = true;
             }
@@ -55,30 +60,38 @@ namespace WcfService1
             }
             return valid;
         }
-    public bool AddDoctor(string username,string phone,string speciality,string location,string time,string day,string fee)
+        public bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee)
         {
-            bool valid=false;
-            foreach(Doctor u in Doc)
+
+            Doctor u = new Doctor();
+            u.Dphone = phone;
+            u.Dspecialization = speciality;
+            u.Dlocation = location;
+            u.Dtime = time;
+            u.Day = day;
+            u.Dfee = fee;
+           return true;
+
+        }
+        public bool Updateinfo(string username,string phone, string speciality, string location, string time, string day, string fee)
+        {
+            bool valid = false;
+            foreach(Doctor u in DoctorDL.Doc)
             {
                 if(u.Dusername==username)
-                {   if(phone.Any(Char.IsLetter))
-                    {
-                        valid = false;
-                    }
-                else
-                    {
-                        u.Dphone = phone;
-                        u.Dspecialization = speciality;
-                        u.Dlocation = location;
-                        u.Dtime = time;
-                        u.Day = day;
-                        u.Dfee = fee;
-                        valid = true;
-
-                    }
+                {
+                    u.Dphone = phone;
+                    u.Dspecialization = speciality;
+                    u.Dlocation = location;
+                    u.Dtime = time;
+                    u.Day = day;
+                    u.Dfee = fee;
+                    valid = true;
                 }
+
             }
             return valid;
+            
         }
     }
 }

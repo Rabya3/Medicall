@@ -30,10 +30,10 @@ namespace WcfService1
             return composite;
         }
 
-        public bool Dregister(string username, string password, string cpassword, string question, string answer)
+        public bool Dregister(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day)
         {
             DoctorDL Dr = new DoctorDL();
-            bool Dregister = Dr.Dregister(username, password, cpassword, question, answer);
+            bool Dregister = Dr.Dregister(username, password, question, answer, speciality, phone, location, fee, time, day);
             return Dregister;
         }
 
@@ -77,7 +77,13 @@ namespace WcfService1
             bool D = Dr.AddDoctor(username,phone,speciality,location,time,day,fee);
             return D;
         }
+        public bool Updateinfo(string username, string phone, string speciality, string location, string time, string day, string fee)
+        {
+            DoctorDL Dr = new DoctorDL();
+            bool D = Dr.Updateinfo(username, phone, speciality, location, time, day, fee);
+            return D;
 
+        }
 
     }
 }

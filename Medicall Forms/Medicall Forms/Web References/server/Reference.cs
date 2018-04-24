@@ -47,6 +47,8 @@ namespace Medicall_Forms.server {
         
         private System.Threading.SendOrPostCallback AddDoctorOperationCompleted;
         
+        private System.Threading.SendOrPostCallback UpdateinfoOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -113,6 +115,9 @@ namespace Medicall_Forms.server {
         public event AddDoctorCompletedEventHandler AddDoctorCompleted;
         
         /// <remarks/>
+        public event UpdateinfoCompletedEventHandler UpdateinfoCompleted;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string GetData(int value, [System.Xml.Serialization.XmlIgnoreAttribute()] bool valueSpecified) {
@@ -176,33 +181,43 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Dregister", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void Dregister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string cpassword, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, out bool DregisterResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DregisterResultSpecified) {
+        public void Dregister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, out bool DregisterResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DregisterResultSpecified) {
             object[] results = this.Invoke("Dregister", new object[] {
                         username,
                         password,
-                        cpassword,
                         question,
-                        answer});
+                        answer,
+                        speciality,
+                        phone,
+                        location,
+                        fee,
+                        time,
+                        day});
             DregisterResult = ((bool)(results[0]));
             DregisterResultSpecified = ((bool)(results[1]));
         }
         
         /// <remarks/>
-        public void DregisterAsync(string username, string password, string cpassword, string question, string answer) {
-            this.DregisterAsync(username, password, cpassword, question, answer, null);
+        public void DregisterAsync(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day) {
+            this.DregisterAsync(username, password, question, answer, speciality, phone, location, fee, time, day, null);
         }
         
         /// <remarks/>
-        public void DregisterAsync(string username, string password, string cpassword, string question, string answer, object userState) {
+        public void DregisterAsync(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day, object userState) {
             if ((this.DregisterOperationCompleted == null)) {
                 this.DregisterOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDregisterOperationCompleted);
             }
             this.InvokeAsync("Dregister", new object[] {
                         username,
                         password,
-                        cpassword,
                         question,
-                        answer}, this.DregisterOperationCompleted, userState);
+                        answer,
+                        speciality,
+                        phone,
+                        location,
+                        fee,
+                        time,
+                        day}, this.DregisterOperationCompleted, userState);
         }
         
         private void OnDregisterOperationCompleted(object arg) {
@@ -425,6 +440,48 @@ namespace Medicall_Forms.server {
             if ((this.AddDoctorCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.AddDoctorCompleted(this, new AddDoctorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Updateinfo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Updateinfo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, out bool UpdateinfoResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateinfoResultSpecified) {
+            object[] results = this.Invoke("Updateinfo", new object[] {
+                        username,
+                        phone,
+                        speciality,
+                        location,
+                        time,
+                        day,
+                        fee});
+            UpdateinfoResult = ((bool)(results[0]));
+            UpdateinfoResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void UpdateinfoAsync(string username, string phone, string speciality, string location, string time, string day, string fee) {
+            this.UpdateinfoAsync(username, phone, speciality, location, time, day, fee, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateinfoAsync(string username, string phone, string speciality, string location, string time, string day, string fee, object userState) {
+            if ((this.UpdateinfoOperationCompleted == null)) {
+                this.UpdateinfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateinfoOperationCompleted);
+            }
+            this.InvokeAsync("Updateinfo", new object[] {
+                        username,
+                        phone,
+                        speciality,
+                        location,
+                        time,
+                        day,
+                        fee}, this.UpdateinfoOperationCompleted, userState);
+        }
+        
+        private void OnUpdateinfoOperationCompleted(object arg) {
+            if ((this.UpdateinfoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateinfoCompleted(this, new UpdateinfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -777,6 +834,40 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public bool AddDoctorResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void UpdateinfoCompletedEventHandler(object sender, UpdateinfoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateinfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateinfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool UpdateinfoResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool UpdateinfoResultSpecified {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));

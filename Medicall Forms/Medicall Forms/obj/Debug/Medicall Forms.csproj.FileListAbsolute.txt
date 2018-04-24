@@ -66,4 +66,4 @@ C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Plogin.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Dreset.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Drlogin.resources
-C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.DocPortal.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Updateinfo.resources
