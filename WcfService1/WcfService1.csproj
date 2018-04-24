@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="AdminDL.cs" />
     <Compile Include="blood.cs" />
     <Compile Include="bloodreg.cs" />
     <Compile Include="Doctor.cs" />

@@ -91,6 +91,12 @@ namespace WcfService1
             return D;
 
         }
+        public bool Aregister(string username, string password)
+        {
+            AdminDL Dr = new AdminDL();
+            bool D = Dr.Aregister(username,password);
+            return D;
+        }
 
     }
 }

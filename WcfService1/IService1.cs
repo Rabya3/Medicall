@@ -39,6 +39,8 @@ namespace WcfService1
         bool Updateinfo(string username, string phone, string speciality, string location, string time, string day, string fee);
         [OperationContract]
         bool bregister(string username, string contact, string group, string address);
+        [OperationContract]
+        bool Aregister(string username, string password);
 
 
 
