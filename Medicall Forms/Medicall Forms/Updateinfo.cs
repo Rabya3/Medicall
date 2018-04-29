@@ -126,5 +126,10 @@ namespace Medicall_Forms
         {
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

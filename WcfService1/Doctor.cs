@@ -1,36 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace WcfService1
 {
+    [DataContract]
     public class Doctor
     {
-        private string dusername;
+        private string username;
         private string dpassword;
         private string dcpassword;
         private string dquestion;
         private string danswer;
-        private string dlocation;
-        private string dspecialization;
+        private string location;
+        private string specialization;
         private string day;
-        private string dtime;
-        private string dphone;
-        private string dfee;
-
-        public string Dusername
-        {
-            get
-            {
-                return dusername;
-            }
-
-            set
-            {
-                dusername = value;
-            }
-        }
+        private string time;
+        private string phone;
+        private string fee;
 
         public string Dpassword
         {
@@ -44,7 +33,7 @@ namespace WcfService1
                 dpassword = value;
             }
         }
-
+       
         public string Dcpassword
         {
             get
@@ -57,7 +46,7 @@ namespace WcfService1
                 dcpassword = value;
             }
         }
-
+       
         public string Danswer
         {
             get
@@ -70,33 +59,33 @@ namespace WcfService1
                 danswer = value;
             }
         }
-
-        public string Dlocation
+        [DataMember]
+        public string Location
         {
             get
             {
-                return dlocation;
+                return location;
             }
 
             set
             {
-                dlocation = value;
+                location = value;
             }
         }
-
-        public string Dspecialization
+        [DataMember]
+        public string Specialization
         {
             get
             {
-                return dspecialization;
+                return specialization;
             }
 
             set
             {
-                dspecialization = value;
+                specialization = value;
             }
         }
-
+        [DataMember]
         public string Day
         {
             get
@@ -109,17 +98,17 @@ namespace WcfService1
                 day = value;
             }
         }
-
-        public string Dtime
+        [DataMember]
+        public string Time
         {
             get
             {
-                return dtime;
+                return time;
             }
 
             set
             {
-                dtime = value;
+                time = value;
             }
         }
 
@@ -135,30 +124,44 @@ namespace WcfService1
                 dquestion = value;
             }
         }
-
-        public string Dphone
+        [DataMember]
+        public string Phone
         {
             get
             {
-                return dphone;
+                return phone;
             }
 
             set
             {
-                dphone = value;
+                phone = value;
+            }
+        }
+        [DataMember]
+        public string Fee
+        {
+            get
+            {
+                return fee;
+            }
+
+            set
+            {
+                fee = value;
             }
         }
 
-        public string Dfee
+        [DataMember]
+        public string Username
         {
             get
             {
-                return dfee;
+                return username;
             }
 
             set
             {
-                dfee = value;
+                username = value;
             }
         }
     }

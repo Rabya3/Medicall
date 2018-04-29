@@ -31,10 +31,8 @@
             this.Pregbtn = new System.Windows.Forms.Button();
             this.PcomboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Panstxt = new System.Windows.Forms.TextBox();
-            this.Pcpasstxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Ppasstxt = new System.Windows.Forms.TextBox();
@@ -48,6 +46,8 @@
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.Loginlabel = new System.Windows.Forms.LinkLabel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Pcpasstxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Pregbtn
@@ -88,17 +88,6 @@
             this.label9.TabIndex = 60;
             this.label9.Text = "Answer";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(150, 197);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 23);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "Confirm Password";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -117,14 +106,6 @@
             this.Panstxt.Name = "Panstxt";
             this.Panstxt.Size = new System.Drawing.Size(149, 26);
             this.Panstxt.TabIndex = 56;
-            // 
-            // Pcpasstxt
-            // 
-            this.Pcpasstxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pcpasstxt.Location = new System.Drawing.Point(337, 196);
-            this.Pcpasstxt.Name = "Pcpasstxt";
-            this.Pcpasstxt.Size = new System.Drawing.Size(149, 26);
-            this.Pcpasstxt.TabIndex = 55;
             // 
             // label6
             // 
@@ -153,6 +134,7 @@
             this.Ppasstxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ppasstxt.Location = new System.Drawing.Point(337, 154);
             this.Ppasstxt.Name = "Ppasstxt";
+            this.Ppasstxt.PasswordChar = '*';
             this.Ppasstxt.Size = new System.Drawing.Size(149, 26);
             this.Ppasstxt.TabIndex = 52;
             // 
@@ -272,6 +254,26 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(150, 197);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 23);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "Confirm Password";
+            // 
+            // Pcpasstxt
+            // 
+            this.Pcpasstxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pcpasstxt.Location = new System.Drawing.Point(337, 196);
+            this.Pcpasstxt.Name = "Pcpasstxt";
+            this.Pcpasstxt.PasswordChar = '*';
+            this.Pcpasstxt.Size = new System.Drawing.Size(149, 26);
+            this.Pcpasstxt.TabIndex = 55;
+            // 
             // Patregister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,10 +313,8 @@
         private System.Windows.Forms.Button Pregbtn;
         private System.Windows.Forms.ComboBox PcomboBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox Panstxt;
-        private System.Windows.Forms.TextBox Pcpasstxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Ppasstxt;
@@ -328,5 +328,7 @@
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel Loginlabel;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Pcpasstxt;
     }
 }

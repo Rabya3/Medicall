@@ -37,6 +37,7 @@ namespace Medicall_Forms
          
         }
 
+        bool validcall = false;
         private void button2_Click(object sender, EventArgs e)
         {
             server.Service1 server = new server.Service1();
@@ -46,14 +47,14 @@ namespace Medicall_Forms
             if (validuser == true)
             {
                 MessageBox.Show("Login Successful");
-
+                validcall = true;
             }
             else
             {
                 MessageBox.Show("Invalid User");
+                
             }
-            textBox1.Text = " ";
-            textBox2.Text = " ";
+            
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -61,6 +62,30 @@ namespace Medicall_Forms
             Preset p = Preset.getinstance();
             p.Show();
             this.Hide();
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel5_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (validcall == true)
+            {
+                Medinfo m = Medinfo.getinstance();
+                m.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Call");
+            }
+        }
+
+        private void Plogin_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

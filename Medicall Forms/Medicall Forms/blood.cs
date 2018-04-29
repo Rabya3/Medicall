@@ -16,6 +16,16 @@ namespace Medicall_Forms
         {
             InitializeComponent();
         }
+        private static blood Plog_frm;
+        public static blood getinstance()
+        {
+            if (Plog_frm == null)
+            {
+                Plog_frm = new blood();
+            }
+
+            return Plog_frm;
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -44,6 +54,11 @@ namespace Medicall_Forms
 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void blood_Load(object sender, EventArgs e)
         {
 
         }

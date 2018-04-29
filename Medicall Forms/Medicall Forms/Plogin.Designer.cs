@@ -42,6 +42,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // panel2
@@ -126,7 +127,7 @@
             // 
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel4.Location = new System.Drawing.Point(307, 313);
+            this.linkLabel4.Location = new System.Drawing.Point(384, 272);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(92, 13);
             this.linkLabel4.TabIndex = 40;
@@ -139,7 +140,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(102, 209);
+            this.label6.Location = new System.Drawing.Point(179, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 26);
             this.label6.TabIndex = 39;
@@ -150,7 +151,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(102, 273);
+            this.label5.Location = new System.Drawing.Point(179, 233);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 26);
             this.label5.TabIndex = 38;
@@ -159,15 +160,16 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(250, 273);
+            this.textBox2.Location = new System.Drawing.Point(327, 233);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(149, 26);
             this.textBox2.TabIndex = 37;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(250, 209);
+            this.textBox1.Location = new System.Drawing.Point(327, 169);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(149, 26);
             this.textBox1.TabIndex = 36;
@@ -178,9 +180,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(429, 366);
+            this.button2.Location = new System.Drawing.Point(365, 320);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 43);
+            this.button2.Size = new System.Drawing.Size(111, 40);
             this.button2.TabIndex = 35;
             this.button2.Text = "Login";
             this.button2.UseVisualStyleBackColor = false;
@@ -191,18 +193,32 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Constantia", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(31, 117);
+            this.label3.Location = new System.Drawing.Point(28, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 36);
             this.label3.TabIndex = 34;
             this.label3.Text = "Login";
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel5.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel5.Location = new System.Drawing.Point(529, 401);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(96, 26);
+            this.linkLabel5.TabIndex = 49;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Continue";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked_1);
             // 
             // Plogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(716, 440);
+            this.ClientSize = new System.Drawing.Size(716, 467);
+            this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -219,6 +235,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Name = "Plogin";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Plogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,5 +257,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkLabel5;
     }
 }

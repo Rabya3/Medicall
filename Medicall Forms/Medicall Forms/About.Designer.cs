@@ -100,9 +100,9 @@
             // 
             this.flowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel1.BackgroundImage")));
             this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-3, 97);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 97);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(710, 180);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(718, 219);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // label3
@@ -110,7 +110,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Constantia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(12, 304);
+            this.label3.Location = new System.Drawing.Point(12, 331);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 33);
             this.label3.TabIndex = 11;
@@ -121,7 +121,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(56, 364);
+            this.label4.Location = new System.Drawing.Point(58, 382);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(558, 26);
             this.label4.TabIndex = 12;
@@ -133,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(709, 448);
+            this.ClientSize = new System.Drawing.Size(741, 447);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.flowLayoutPanel1);

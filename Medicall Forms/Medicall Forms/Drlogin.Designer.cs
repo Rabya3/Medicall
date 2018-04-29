@@ -49,7 +49,7 @@
             // 
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel4.Location = new System.Drawing.Point(302, 292);
+            this.linkLabel4.Location = new System.Drawing.Point(332, 252);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(92, 13);
             this.linkLabel4.TabIndex = 47;
@@ -74,7 +74,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(97, 188);
+            this.label6.Location = new System.Drawing.Point(127, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 26);
             this.label6.TabIndex = 45;
@@ -85,7 +85,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(97, 252);
+            this.label5.Location = new System.Drawing.Point(127, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 26);
             this.label5.TabIndex = 44;
@@ -94,15 +94,16 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(245, 252);
+            this.textBox2.Location = new System.Drawing.Point(275, 212);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(149, 26);
             this.textBox2.TabIndex = 43;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(245, 188);
+            this.textBox1.Location = new System.Drawing.Point(275, 148);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(149, 26);
             this.textBox1.TabIndex = 42;
@@ -113,9 +114,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(274, 325);
+            this.button2.Location = new System.Drawing.Point(322, 296);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 43);
+            this.button2.Size = new System.Drawing.Size(102, 43);
             this.button2.TabIndex = 41;
             this.button2.Text = "Login";
             this.button2.UseVisualStyleBackColor = false;
@@ -126,7 +127,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Constantia", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(26, 96);
+            this.label3.Location = new System.Drawing.Point(12, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 36);
             this.label3.TabIndex = 40;
@@ -138,7 +139,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(-11, 39);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(752, 43);
+            this.panel2.Size = new System.Drawing.Size(791, 43);
             this.panel2.TabIndex = 34;
             // 
             // label4
@@ -201,9 +202,11 @@
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(461, 371);
+            this.linkLabel5.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel5.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel5.Location = new System.Drawing.Point(545, 375);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(63, 13);
+            this.linkLabel5.Size = new System.Drawing.Size(109, 23);
             this.linkLabel5.TabIndex = 48;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Update Info";
@@ -214,7 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(677, 417);
+            this.ClientSize = new System.Drawing.Size(707, 448);
             this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabel3);

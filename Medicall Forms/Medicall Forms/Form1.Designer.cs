@@ -52,7 +52,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel1.Location = new System.Drawing.Point(522, 23);
+            this.linkLabel1.Location = new System.Drawing.Point(642, 22);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(83, 18);
             this.linkLabel1.TabIndex = 1;
@@ -65,7 +65,7 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel2.Location = new System.Drawing.Point(629, 23);
+            this.linkLabel2.Location = new System.Drawing.Point(749, 22);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(69, 18);
             this.linkLabel2.TabIndex = 2;
@@ -115,7 +115,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(1, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(752, 43);
+            this.panel2.Size = new System.Drawing.Size(832, 43);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -124,7 +124,7 @@
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel3.Location = new System.Drawing.Point(458, 23);
+            this.linkLabel3.Location = new System.Drawing.Point(578, 22);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(49, 18);
             this.linkLabel3.TabIndex = 16;
@@ -138,7 +138,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(372, 411);
+            this.button1.Location = new System.Drawing.Point(428, 410);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 43);
             this.button1.TabIndex = 14;
@@ -152,7 +152,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(618, 411);
+            this.button2.Location = new System.Drawing.Point(729, 410);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 43);
             this.button2.TabIndex = 15;
@@ -167,7 +167,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 98);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(752, 246);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(832, 246);
             this.flowLayoutPanel1.TabIndex = 11;
             // 
             // checkBox2
@@ -175,7 +175,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.checkBox2.Location = new System.Drawing.Point(54, 434);
+            this.checkBox2.Location = new System.Drawing.Point(88, 442);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(56, 20);
             this.checkBox2.TabIndex = 37;
@@ -187,7 +187,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.checkBox1.Location = new System.Drawing.Point(54, 402);
+            this.checkBox1.Location = new System.Drawing.Point(88, 410);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(67, 20);
             this.checkBox1.TabIndex = 36;
@@ -197,22 +197,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(14, 366);
+            this.label3.Location = new System.Drawing.Point(42, 375);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 19);
+            this.label3.Size = new System.Drawing.Size(64, 23);
             this.label3.TabIndex = 38;
             this.label3.Text = "Join as";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(258, 376);
+            this.label6.Location = new System.Drawing.Point(365, 375);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 19);
+            this.label6.Size = new System.Drawing.Size(163, 23);
             this.label6.TabIndex = 40;
             this.label6.Text = "Create an Account";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -220,22 +220,23 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(479, 376);
+            this.label7.Location = new System.Drawing.Point(613, 375);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 19);
+            this.label7.Size = new System.Drawing.Size(220, 23);
             this.label7.TabIndex = 41;
             this.label7.Text = "Already have an account?";
             // 
             // Loginlabel
             // 
             this.Loginlabel.AutoSize = true;
-            this.Loginlabel.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Loginlabel.LinkColor = System.Drawing.Color.Navy;
-            this.Loginlabel.Location = new System.Drawing.Point(466, 485);
+            this.Loginlabel.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loginlabel.ForeColor = System.Drawing.Color.Maroon;
+            this.Loginlabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Loginlabel.Location = new System.Drawing.Point(42, 485);
             this.Loginlabel.Name = "Loginlabel";
-            this.Loginlabel.Size = new System.Drawing.Size(261, 23);
+            this.Loginlabel.Size = new System.Drawing.Size(256, 23);
             this.Loginlabel.TabIndex = 66;
             this.Loginlabel.TabStop = true;
             this.Loginlabel.Text = "Do you want to Donate blood?";
@@ -246,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(756, 517);
+            this.ClientSize = new System.Drawing.Size(838, 517);
             this.Controls.Add(this.Loginlabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);

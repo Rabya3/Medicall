@@ -2,37 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Runtime.Serialization;
 
 namespace WcfService1
 {
+    [DataContract]
     public class Lab
     {
-        public string lname;
-        public string llocation;
-
-        public string Lname
+        public string name;
+        public string location;
+        [DataMember]
+        public string Name
         {
             get
             {
-                return lname;
+                return name;
             }
 
             set
             {
-                lname = value;
+                name = value;
             }
         }
-
-        public string Llocation
+        [DataMember]
+        public string Location
         {
             get
             {
-                return llocation;
+                return location;
             }
 
             set
             {
-                llocation = value;
+                location = value;
             }
         }
     }

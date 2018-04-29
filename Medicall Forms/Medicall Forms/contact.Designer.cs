@@ -112,9 +112,9 @@
             // 
             this.flowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel1.BackgroundImage")));
             this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 86);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 86);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(716, 204);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(696, 251);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
             // label3
@@ -122,7 +122,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Constantia", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(165, 312);
+            this.label3.Location = new System.Drawing.Point(147, 353);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(370, 29);
             this.label3.TabIndex = 21;
@@ -133,7 +133,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Constantia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(12, 361);
+            this.label5.Location = new System.Drawing.Point(15, 380);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 33);
             this.label5.TabIndex = 22;
@@ -143,12 +143,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(148, 400);
+            this.label6.ForeColor = System.Drawing.Color.Navy;
+            this.label6.Location = new System.Drawing.Point(148, 419);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 24);
+            this.label6.Size = new System.Drawing.Size(127, 24);
             this.label6.TabIndex = 23;
-            this.label6.Text = "042-32998426";
+            this.label6.Text = "xxx-xxxxxxx\r\n";
             // 
             // contact
             // 

@@ -5,6 +5,7 @@ using System.Web;
 
 namespace WcfService1
 {
+
     public class Patient
     {
         private string pusername;

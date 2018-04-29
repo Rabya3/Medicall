@@ -94,3 +94,11 @@ C:\Users\Track\Desktop\AIMENNNNNNNN\Medicall\Medicall Forms\Medicall Forms\obj\D
 C:\Users\Track\Desktop\AIMENNNNNNNN\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Plogin.resources
 C:\Users\Track\Desktop\AIMENNNNNNNN\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Dreset.resources
 C:\Users\Track\Desktop\AIMENNNNNNNN\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.csproj.GenerateResource.Cache
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.adddoc.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.admin.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.blood.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Search.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.AddLab.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.adminfunc.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Medinfo.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.FindLab.resources

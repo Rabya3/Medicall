@@ -10,10 +10,12 @@ namespace WcfService1
         public static List<Admin> Ad = new List<Admin>();
         public bool Aregister(string username, string password)
         {
-                if (username == "Admin" && password == "123") ;
-                return true;
-           
-
+            bool valid = false;
+            if (username == "Admin" && password == "123")
+            {
+                valid = true;
+            }
+            return valid;
         }
     }
 }

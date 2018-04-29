@@ -60,11 +60,23 @@
     <Compile Include="adddoc.Designer.cs">
       <DependentUpon>adddoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLab.Designer.cs">
+      <DependentUpon>AddLab.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminfunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminfunc.Designer.cs">
+      <DependentUpon>adminfunc.cs</DependentUpon>
     </Compile>
     <Compile Include="blood.cs">
       <SubType>Form</SubType>
@@ -77,6 +89,24 @@
     </Compile>
     <Compile Include="contact.Designer.cs">
       <DependentUpon>contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindLab.Designer.cs">
+      <DependentUpon>FindLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medinfo.Designer.cs">
+      <DependentUpon>Medinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
     </Compile>
     <Compile Include="Updateinfo.cs">
       <SubType>Form</SubType>
@@ -139,14 +169,29 @@
     <EmbeddedResource Include="adddoc.resx">
       <DependentUpon>adddoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddLab.resx">
+      <DependentUpon>AddLab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminfunc.resx">
+      <DependentUpon>adminfunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="blood.resx">
       <DependentUpon>blood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="contact.resx">
       <DependentUpon>contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindLab.resx">
+      <DependentUpon>FindLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medinfo.resx">
+      <DependentUpon>Medinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Updateinfo.resx">
       <DependentUpon>Updateinfo.cs</DependentUpon>
@@ -191,6 +236,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Web References\server\CompositeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\server\Doctor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\server\Lab.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\server\Reference.map">

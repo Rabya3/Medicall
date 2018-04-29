@@ -16,6 +16,16 @@ namespace Medicall_Forms
         {
             InitializeComponent();
         }
+        private static adddoc Dlog_frm;
+        public static adddoc getinstance()
+        {
+            if (Dlog_frm == null)
+            {
+                Dlog_frm = new adddoc();
+            }
+
+            return Dlog_frm;
+        }
 
         private void Pregbtn_Click(object sender, EventArgs e)
         {
@@ -25,14 +35,24 @@ namespace Medicall_Forms
             server.AddDoctor(Dnametxt.Text, phonetxt.Text, specialtxt.Text, locationtxt.Text, timingstxt.Text, daytxt.Text, feetxt.Text, out validuser, out passed);
             if (validuser == true)
             {
-                MessageBox.Show("Welcome to team MEDI-CALL");
+                MessageBox.Show("Sucessfully Added");
 
             }
             else
             {
-                MessageBox.Show("Error: Invaid Input");
+                MessageBox.Show("Invalid");
 
             }
+        }
+
+        private void adddoc_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void specialtxt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -206,4 +206,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SearchDoc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="speciality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fee" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDocResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchDocResult" nillable="true" type="q3:ArrayOfDoctor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchLab">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchLabResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchLabResult" nillable="true" type="q4:ArrayOfLab" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

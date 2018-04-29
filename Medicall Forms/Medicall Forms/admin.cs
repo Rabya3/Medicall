@@ -16,7 +16,7 @@ namespace Medicall_Forms
         {
             InitializeComponent();
         }
-
+        bool validcall = false;
         private void button2_Click(object sender, EventArgs e)
         {
             server.Service1 server = new server.Service1();
@@ -26,11 +26,52 @@ namespace Medicall_Forms
             if (validuser == true)
             {
                 MessageBox.Show("Login Successful");
-
+                validcall = true;
             }
             else
             {
                 MessageBox.Show("Invalid User");
+                validcall = false;
+            }
+        }
+
+        private void admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(validcall==true)
+            {
+                MessageBox.Show("Signing you in!");
+                adminfunc A = adminfunc.getinstance();
+                A.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invaid Call");
             }
         }
     }

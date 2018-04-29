@@ -94,11 +94,22 @@ namespace WcfService1
         }
         public bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee)
         {
-
             DoctorDL Dr = new DoctorDL();
             bool D = Dr.AddDoctor(username, phone, speciality, location, time, day, fee);
             return D;
         }
+        public List<Doctor> SearchDoc(string speciality, string location, string fee)
+        {
+            DoctorDL Dr = new DoctorDL();
+           List<Doctor> D = Dr.SearchDoc(speciality, location, fee);
+            return D;
+        }
+        public List<Lab> SearchLab(string Area)
+        {
+            LabDL Lb = new LabDL();
+            List<Lab> D = Lb.SearchLab(Area);
+            return D;
 
+        }
     }
 }

@@ -52,6 +52,11 @@ namespace Medicall_Forms
             Dpasstxt.Text = " ";
             DcomboBox1.Text = " ";
             Danstxt.Text = " ";
+            specialtxt.Text = "";
+            locationtxt.Text = "";
+            feetxt.Text = "";
+            daytxt.Text = " ";
+            
             checkBox1.Checked = false;
                 
         }
@@ -86,6 +91,16 @@ namespace Medicall_Forms
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void daytxt_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

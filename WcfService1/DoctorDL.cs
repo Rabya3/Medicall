@@ -18,16 +18,16 @@ namespace WcfService1
             else
             {
                 Doctor D = new Doctor();
-                D.Dusername = username;
+                D.Username = username;
                 D.Dpassword = password;
                 D.Dquestion = question;
                 D.Danswer = answer;
-                D.Dspecialization = speciality;
-                D.Dphone = phone;
-                D.Dlocation = location;
+                D.Specialization = speciality;
+                D.Phone = phone;
+                D.Location = location;
                 D.Day = day;
-                D.Dfee = fee;
-                D.Dtime = time;
+                D.Fee = fee;
+                D.Time = time;
                 DoctorDL.Doc.Add(D);
                 valid = true;
             }
@@ -40,7 +40,7 @@ namespace WcfService1
 
             foreach (Doctor u in DoctorDL.Doc)
             {
-                if (u.Dusername == username && u.Dpassword == password)
+                if (u.Username == username && u.Dpassword == password)
                 {
                     isfound = true;
                 }
@@ -52,7 +52,7 @@ namespace WcfService1
             bool valid = false;
             foreach (Doctor u in DoctorDL.Doc)
             {
-                if (u.Dusername == username && u.Dquestion == question && u.Danswer == answer)
+                if (u.Username == username && u.Dquestion == question && u.Danswer == answer)
                 {
                     u.Dpassword = password;
                     valid = true;
@@ -62,36 +62,46 @@ namespace WcfService1
         }
         public bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee)
         {
-
             Doctor u = new Doctor();
-            u.Dphone = phone;
-            u.Dspecialization = speciality;
-            u.Dlocation = location;
-            u.Dtime = time;
+            u.Phone = phone;
+            u.Specialization = speciality;
+            u.Location = location;
+            u.Time = time;
             u.Day = day;
-            u.Dfee = fee;
+            u.Fee = fee;
            return true;
-
         }
+
         public bool Updateinfo(string username,string phone, string speciality, string location, string time, string day, string fee)
         {
             bool valid = false;
             foreach(Doctor u in DoctorDL.Doc)
             {
-                if(u.Dusername==username)
+                if(u.Username==username)
                 {
-                    u.Dphone = phone;
-                    u.Dspecialization = speciality;
-                    u.Dlocation = location;
-                    u.Dtime = time;
+                    u.Phone = phone;
+                    u.Specialization = speciality;
+                    u.Location = location;
+                    u.Time = time;
                     u.Day = day;
-                    u.Dfee = fee;
+                    u.Fee = fee;
                     valid = true;
                 }
 
             }
             return valid;
-            
+        }
+        public List<Doctor> SearchDoc(string speciality,string location,string fee)
+        {
+            List<Doctor> DocList = new List<Doctor>();
+            foreach(Doctor u in DoctorDL.Doc)
+            {
+                if(u.Specialization==speciality && u.Location==location && u.Fee==fee)
+                {
+                    DocList.Add(u);
+                }
+            }
+            return DocList;  
         }
     }
 }

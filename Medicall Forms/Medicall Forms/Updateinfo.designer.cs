@@ -51,8 +51,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.Dnametxt = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabel3
@@ -60,7 +60,7 @@
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel3.Location = new System.Drawing.Point(507, 22);
+            this.linkLabel3.Location = new System.Drawing.Point(534, 22);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(49, 18);
             this.linkLabel3.TabIndex = 70;
@@ -105,7 +105,7 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel2.Location = new System.Drawing.Point(681, 22);
+            this.linkLabel2.Location = new System.Drawing.Point(708, 22);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(69, 18);
             this.linkLabel2.TabIndex = 66;
@@ -117,7 +117,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel1.Location = new System.Drawing.Point(585, 22);
+            this.linkLabel1.Location = new System.Drawing.Point(612, 22);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(83, 18);
             this.linkLabel1.TabIndex = 65;
@@ -187,7 +187,7 @@
             this.Pregbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Pregbtn.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pregbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Pregbtn.Location = new System.Drawing.Point(621, 423);
+            this.Pregbtn.Location = new System.Drawing.Point(588, 388);
             this.Pregbtn.Name = "Pregbtn";
             this.Pregbtn.Size = new System.Drawing.Size(120, 43);
             this.Pregbtn.TabIndex = 82;
@@ -344,6 +344,16 @@
             this.label13.Size = new System.Drawing.Size(224, 92);
             this.label13.TabIndex = 97;
             this.label13.Text = "       to share the burden \r\nof those fighting a disease!\r\n\r\n\r\n";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // Dnametxt
+            // 
+            this.Dnametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dnametxt.Location = new System.Drawing.Point(56, 142);
+            this.Dnametxt.Name = "Dnametxt";
+            this.Dnametxt.Size = new System.Drawing.Size(192, 26);
+            this.Dnametxt.TabIndex = 98;
+            this.Dnametxt.TextChanged += new System.EventHandler(this.Dnametxt_TextChanged);
             // 
             // label11
             // 
@@ -352,19 +362,9 @@
             this.label11.ForeColor = System.Drawing.Color.Navy;
             this.label11.Location = new System.Drawing.Point(55, 109);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 23);
+            this.label11.Size = new System.Drawing.Size(83, 23);
             this.label11.TabIndex = 99;
-            this.label11.Text = "User-Name";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // Dnametxt
-            // 
-            this.Dnametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dnametxt.Location = new System.Drawing.Point(56, 142);
-            this.Dnametxt.Name = "Dnametxt";
-            this.Dnametxt.Size = new System.Drawing.Size(149, 26);
-            this.Dnametxt.TabIndex = 98;
-            this.Dnametxt.TextChanged += new System.EventHandler(this.Dnametxt_TextChanged);
+            this.label11.Text = "Name  👨";
             // 
             // Updateinfo
             // 
@@ -430,7 +430,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox Dnametxt;
+        private System.Windows.Forms.Label label11;
     }
 }
