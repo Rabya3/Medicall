@@ -16,5 +16,22 @@ namespace Medicall_Forms
         {
             InitializeComponent();
         }
+
+        private void Pregbtn_Click(object sender, EventArgs e)
+        {   bool validuser;
+            bool passed;
+            server.Service1 server = new server.Service1();
+            server.AddLab(Dnametxt.Text, phonetxt.Text, locationtxt.Text, out validuser, out passed);
+            if (validuser == true)
+            {
+                MessageBox.Show("Sucessfully Added");
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid");
+
+            }
+        }
     }
 }

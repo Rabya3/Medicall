@@ -20,5 +20,13 @@ namespace WcfService1
             }
             return LabList;
         }
+        public bool AddLab(string username,string location,string day)
+        {
+            Lab u = new Lab();
+            u.Location = location;
+            u.name = username;
+            return true;
+        }
+
     }
 }

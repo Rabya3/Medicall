@@ -45,6 +45,8 @@ namespace WcfService1
         List<Doctor> SearchDoc(string speciality, string location, string fee);
         [OperationContract]
         List<Lab> SearchLab(string Area);
+        [OperationContract]
+        bool AddLab(string username, string location, string day);
 
 
 

@@ -109,7 +109,12 @@ namespace WcfService1
             LabDL Lb = new LabDL();
             List<Lab> D = Lb.SearchLab(Area);
             return D;
-
+        }
+        public bool AddLab(string username, string location, string day)
+        {
+            LabDL Dr = new LabDL();
+            bool D = Dr.AddLab(username, location, day);
+            return D;
         }
     }
 }

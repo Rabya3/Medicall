@@ -91,6 +91,12 @@
   <wsdl:message name="IService1_SearchLab_OutputMessage">
     <wsdl:part name="parameters" element="tns:SearchLabResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_AddLab_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLab" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddLab_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLabResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -147,6 +153,10 @@
     <wsdl:operation name="SearchLab">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchLab" message="tns:IService1_SearchLab_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchLabResponse" message="tns:IService1_SearchLab_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLab">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddLab" message="tns:IService1_AddLab_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddLabResponse" message="tns:IService1_AddLab_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -270,6 +280,15 @@
     </wsdl:operation>
     <wsdl:operation name="SearchLab">
       <soap:operation soapAction="http://tempuri.org/IService1/SearchLab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLab">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddLab" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

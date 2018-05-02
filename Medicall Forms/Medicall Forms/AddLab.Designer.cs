@@ -200,6 +200,7 @@
             this.Pregbtn.TabIndex = 121;
             this.Pregbtn.Text = "Add Lab";
             this.Pregbtn.UseVisualStyleBackColor = false;
+            this.Pregbtn.Click += new System.EventHandler(this.Pregbtn_Click);
             // 
             // button1
             // 
