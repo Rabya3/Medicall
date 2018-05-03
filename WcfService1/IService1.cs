@@ -42,11 +42,15 @@ namespace WcfService1
         [OperationContract]
         bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee);
         [OperationContract]
+        bool Docverify(string name, string speciality, string fee, string location);
+        [OperationContract]
         List<Doctor> SearchDoc(string speciality, string location, string fee);
         [OperationContract]
         List<Lab> SearchLab(string Area);
         [OperationContract]
-        bool AddLab(string username, string location, string day);
+        bool Labverify(string name, string location);
+        [OperationContract]
+        bool AddLab(string username, string location);
 
 
 

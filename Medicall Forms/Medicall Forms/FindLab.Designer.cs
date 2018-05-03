@@ -150,11 +150,11 @@
             this.locationtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationtxt.FormattingEnabled = true;
             this.locationtxt.Items.AddRange(new object[] {
-            "JOHAR     TOWN",
-            "GARDEN  TOWN",
-            "MODEL    TOWN",
-            "PIA           SOCIETY ",
-            "DHA "});
+            "Johar Town",
+            "Garden Town",
+            "Model Town",
+            "Pia Society",
+            "DHA"});
             this.locationtxt.Location = new System.Drawing.Point(36, 151);
             this.locationtxt.Name = "locationtxt";
             this.locationtxt.Size = new System.Drawing.Size(189, 24);

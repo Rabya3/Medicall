@@ -33,6 +33,7 @@ namespace Medicall_Forms
             BindingSource S = new BindingSource();
             S.DataSource = list;
             dataGridView1.DataSource = S;
+            locationtxt.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

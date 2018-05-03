@@ -33,6 +33,8 @@ namespace Medicall_Forms
                 MessageBox.Show("Invalid User");
                 validcall = false;
             }
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private void admin_Load(object sender, EventArgs e)

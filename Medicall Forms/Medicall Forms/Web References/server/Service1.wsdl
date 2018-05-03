@@ -79,6 +79,12 @@
   <wsdl:message name="IService1_AddDoctor_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddDoctorResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_Docverify_InputMessage">
+    <wsdl:part name="parameters" element="tns:Docverify" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Docverify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocverifyResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_SearchDoc_InputMessage">
     <wsdl:part name="parameters" element="tns:SearchDoc" />
   </wsdl:message>
@@ -90,6 +96,12 @@
   </wsdl:message>
   <wsdl:message name="IService1_SearchLab_OutputMessage">
     <wsdl:part name="parameters" element="tns:SearchLabResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Labverify_InputMessage">
+    <wsdl:part name="parameters" element="tns:Labverify" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Labverify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabverifyResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_AddLab_InputMessage">
     <wsdl:part name="parameters" element="tns:AddLab" />
@@ -146,6 +158,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddDoctor" message="tns:IService1_AddDoctor_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddDoctorResponse" message="tns:IService1_AddDoctor_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Docverify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Docverify" message="tns:IService1_Docverify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DocverifyResponse" message="tns:IService1_Docverify_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="SearchDoc">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchDoc" message="tns:IService1_SearchDoc_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchDocResponse" message="tns:IService1_SearchDoc_OutputMessage" />
@@ -153,6 +169,10 @@
     <wsdl:operation name="SearchLab">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchLab" message="tns:IService1_SearchLab_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchLabResponse" message="tns:IService1_SearchLab_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Labverify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Labverify" message="tns:IService1_Labverify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LabverifyResponse" message="tns:IService1_Labverify_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddLab">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddLab" message="tns:IService1_AddLab_InputMessage" />
@@ -269,6 +289,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Docverify">
+      <soap:operation soapAction="http://tempuri.org/IService1/Docverify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SearchDoc">
       <soap:operation soapAction="http://tempuri.org/IService1/SearchDoc" style="document" />
       <wsdl:input>
@@ -280,6 +309,15 @@
     </wsdl:operation>
     <wsdl:operation name="SearchLab">
       <soap:operation soapAction="http://tempuri.org/IService1/SearchLab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Labverify">
+      <soap:operation soapAction="http://tempuri.org/IService1/Labverify" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

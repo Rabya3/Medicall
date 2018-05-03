@@ -38,5 +38,26 @@ namespace Medicall_Forms
         {
 
         }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VerifyDoc v = new VerifyDoc();
+            v.Show();
+            this.Hide();
+        }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VerifyL L = new VerifyL();
+            L.Show();
+            this.Hide();
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddLab l = new AddLab();
+            l.Show();
+            this.Hide();
+        }
     }
 }

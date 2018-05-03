@@ -112,7 +112,7 @@
             this.daytxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daytxt.FormattingEnabled = true;
             this.daytxt.Items.AddRange(new object[] {
-            "Moday",
+            "Monday",
             "Tuesday",
             "Wednesday",
             "Thursday",
@@ -143,7 +143,7 @@
             this.locationtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationtxt.FormattingEnabled = true;
             this.locationtxt.Items.AddRange(new object[] {
-            "Johat Town",
+            "Johar Town",
             "Garden Town",
             "Model Town",
             "Pia Society",
@@ -153,6 +153,7 @@
             this.locationtxt.Size = new System.Drawing.Size(189, 24);
             this.locationtxt.TabIndex = 106;
             this.locationtxt.Text = "-Select a Place";
+            this.locationtxt.SelectedIndexChanged += new System.EventHandler(this.locationtxt_SelectedIndexChanged);
             // 
             // specialtxt
             // 

@@ -49,6 +49,8 @@ namespace Medicall_Forms
             timingstxt.Text = "";
             daytxt.Text = "";
             feetxt.Text = "";
+            phonetxt.Text = "";
+            timingstxt.Text = "";
 
         }
 

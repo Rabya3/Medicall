@@ -43,6 +43,13 @@ namespace Medicall_Forms
                 MessageBox.Show("Invalid");
 
             }
+            Dnametxt.Text = "";
+            phonetxt.Text = "";
+            specialtxt.Text = "";
+            locationtxt.Text = "";
+            timingstxt.Text = "";
+            feetxt.Text = "";
+            daytxt.Text = "";
         }
 
         private void adddoc_Load(object sender, EventArgs e)
@@ -51,6 +58,11 @@ namespace Medicall_Forms
         }
 
         private void specialtxt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locationtxt_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

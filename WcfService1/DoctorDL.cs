@@ -8,6 +8,7 @@ namespace WcfService1
     public class DoctorDL
     {
         public static List<Doctor> Doc = new List<Doctor>();
+        public static List<Doctor> DocV = new List<Doctor>();
         public bool Dregister(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day)
         {
             bool valid;
@@ -91,17 +92,30 @@ namespace WcfService1
             }
             return valid;
         }
-        public List<Doctor> SearchDoc(string speciality,string location,string fee)
+        public bool Docverify(string name, string speciality, string fee, string location)
+        {
+            bool valid = false;
+            foreach (Doctor u in Doc)
+            {
+                if (u.Username == name && u.Specialization == speciality && u.Fee == fee && u.Location == location)
+                {
+                    DocV.Add(u);
+                    valid = true;
+                }
+            }
+            return valid;
+        }
+        public List<Doctor> SearchDoc(string speciality, string location, string fee)
         {
             List<Doctor> DocList = new List<Doctor>();
-            foreach(Doctor u in DoctorDL.Doc)
+            foreach (Doctor u in DoctorDL.DocV)
             {
-                if(u.Specialization==speciality && u.Location==location && u.Fee==fee)
+                if (u.Specialization == speciality && u.Location == location && u.Fee == fee)
                 {
                     DocList.Add(u);
                 }
             }
-            return DocList;  
+            return DocList;
         }
     }
 }

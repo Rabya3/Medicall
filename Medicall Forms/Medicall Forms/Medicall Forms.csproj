@@ -158,6 +158,18 @@
     <Compile Include="Dreset.Designer.cs">
       <DependentUpon>Dreset.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerifyDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyDoc.Designer.cs">
+      <DependentUpon>VerifyDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyL.Designer.cs">
+      <DependentUpon>VerifyL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Web References\server\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -225,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dreset.resx">
       <DependentUpon>Dreset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyDoc.resx">
+      <DependentUpon>VerifyDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyL.resx">
+      <DependentUpon>VerifyL.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

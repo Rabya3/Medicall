@@ -53,7 +53,7 @@ namespace Medicall_Forms
             Ppasstxt.Text = " ";
             Pcpasstxt.Text = " ";
             Panstxt.Text = " ";
-
+            checkBox1.Checked = false;
         }
 
         private void Loginlabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

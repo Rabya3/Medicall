@@ -130,7 +130,9 @@ namespace Medicall_Forms
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            admin a = new admin();
+            a.Show();
+            this.Hide();
         }
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

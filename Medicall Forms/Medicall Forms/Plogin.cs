@@ -54,7 +54,8 @@ namespace Medicall_Forms
                 MessageBox.Show("Invalid User");
                 
             }
-            
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

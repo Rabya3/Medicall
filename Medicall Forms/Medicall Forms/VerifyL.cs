@@ -10,28 +10,36 @@ using System.Windows.Forms;
 
 namespace Medicall_Forms
 {
-    public partial class AddLab : Form
+    public partial class VerifyL : Form
     {
-        public AddLab()
+        public VerifyL()
         {
             InitializeComponent();
         }
 
-        private void Pregbtn_Click(object sender, EventArgs e)
-        {   bool validuser;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool validuser;
             bool passed;
             server.Service1 server = new server.Service1();
-            server.AddLab(Dnametxt.Text, locationtxt.Text, out validuser, out passed);
+            server.Labverify(textBox1.Text,locationtxt.Text, out validuser, out passed);
             if (validuser == true)
             {
-                MessageBox.Show("Sucessfully Added");
+                MessageBox.Show("Verified");
 
             }
             else
             {
-                MessageBox.Show("Invalid");
+                MessageBox.Show("Not Found");
 
             }
+            textBox1.Text = "";
+            locationtxt.Text = "";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,8 +29,8 @@ namespace Medicall_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-             server.Service1 Oserver = new server.Service1();
-            List<server.Doctor> list=Oserver.SearchDoc(specialtxt.Text, locationtxt.Text, feetxt.Text).ToList<server.Doctor>();
+            server.Service1 Oserver = new server.Service1();
+            List<server.Doctor> list=Oserver.SearchDoc(specialtxt.Text, comboBox1.Text, feetxt.Text).ToList<server.Doctor>();
             BindingSource S = new BindingSource();
             S.DataSource = list;
             dataGridView1.DataSource = S;

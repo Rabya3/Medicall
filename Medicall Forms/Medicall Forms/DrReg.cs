@@ -48,14 +48,16 @@ namespace Medicall_Forms
             {
                 MessageBox.Show("Please fill all boxes");
             }
-            Dnametxt.Text = " ";
-            Dpasstxt.Text = " ";
-            DcomboBox1.Text = " ";
-            Danstxt.Text = " ";
+            Dnametxt.Text = "";
+            Dpasstxt.Text = "";
+            DcomboBox1.Text = "";
+            Danstxt.Text = "";
             specialtxt.Text = "";
             locationtxt.Text = "";
             feetxt.Text = "";
             daytxt.Text = " ";
+            phonetxt.Text = "";
+            timingstxt.Text = "";
             
             checkBox1.Checked = false;
                 

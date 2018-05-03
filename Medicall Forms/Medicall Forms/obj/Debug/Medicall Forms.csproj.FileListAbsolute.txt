@@ -102,3 +102,5 @@ C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.adminfunc.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Medinfo.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.FindLab.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.VerifyDoc.resources
+C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.VerifyL.resources

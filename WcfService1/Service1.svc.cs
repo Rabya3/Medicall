@@ -98,10 +98,22 @@ namespace WcfService1
             bool D = Dr.AddDoctor(username, phone, speciality, location, time, day, fee);
             return D;
         }
+        public bool Docverify(string name, string speciality, string fee, string location)
+        {
+            DoctorDL Dr = new DoctorDL();
+            bool D = Dr.Docverify(name, speciality, fee, location);
+            return D;
+        }
         public List<Doctor> SearchDoc(string speciality, string location, string fee)
         {
             DoctorDL Dr = new DoctorDL();
-           List<Doctor> D = Dr.SearchDoc(speciality, location, fee);
+            List<Doctor> D = Dr.SearchDoc(speciality, location, fee);
+            return D;
+        }
+        public bool Labverify(string name,string location)
+        {
+            LabDL Dr = new LabDL();
+            bool D = Dr.Labverify(name,location);
             return D;
         }
         public List<Lab> SearchLab(string Area)
@@ -110,10 +122,10 @@ namespace WcfService1
             List<Lab> D = Lb.SearchLab(Area);
             return D;
         }
-        public bool AddLab(string username, string location, string day)
+        public bool AddLab(string username, string location)
         {
             LabDL Dr = new LabDL();
-            bool D = Dr.AddLab(username, location, day);
+            bool D = Dr.AddLab(username, location);
             return D;
         }
     }

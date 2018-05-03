@@ -53,9 +53,13 @@ namespace Medicall_Forms.server {
         
         private System.Threading.SendOrPostCallback AddDoctorOperationCompleted;
         
+        private System.Threading.SendOrPostCallback DocverifyOperationCompleted;
+        
         private System.Threading.SendOrPostCallback SearchDocOperationCompleted;
         
         private System.Threading.SendOrPostCallback SearchLabOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback LabverifyOperationCompleted;
         
         private System.Threading.SendOrPostCallback AddLabOperationCompleted;
         
@@ -134,10 +138,16 @@ namespace Medicall_Forms.server {
         public event AddDoctorCompletedEventHandler AddDoctorCompleted;
         
         /// <remarks/>
+        public event DocverifyCompletedEventHandler DocverifyCompleted;
+        
+        /// <remarks/>
         public event SearchDocCompletedEventHandler SearchDocCompleted;
         
         /// <remarks/>
         public event SearchLabCompletedEventHandler SearchLabCompleted;
+        
+        /// <remarks/>
+        public event LabverifyCompletedEventHandler LabverifyCompleted;
         
         /// <remarks/>
         public event AddLabCompletedEventHandler AddLabCompleted;
@@ -579,6 +589,42 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Docverify", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Docverify([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, out bool DocverifyResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DocverifyResultSpecified) {
+            object[] results = this.Invoke("Docverify", new object[] {
+                        name,
+                        speciality,
+                        fee,
+                        location});
+            DocverifyResult = ((bool)(results[0]));
+            DocverifyResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void DocverifyAsync(string name, string speciality, string fee, string location) {
+            this.DocverifyAsync(name, speciality, fee, location, null);
+        }
+        
+        /// <remarks/>
+        public void DocverifyAsync(string name, string speciality, string fee, string location, object userState) {
+            if ((this.DocverifyOperationCompleted == null)) {
+                this.DocverifyOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDocverifyOperationCompleted);
+            }
+            this.InvokeAsync("Docverify", new object[] {
+                        name,
+                        speciality,
+                        fee,
+                        location}, this.DocverifyOperationCompleted, userState);
+        }
+        
+        private void OnDocverifyOperationCompleted(object arg) {
+            if ((this.DocverifyCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DocverifyCompleted(this, new DocverifyCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchDoc", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
@@ -645,30 +691,60 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Labverify", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Labverify([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, out bool LabverifyResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool LabverifyResultSpecified) {
+            object[] results = this.Invoke("Labverify", new object[] {
+                        name,
+                        location});
+            LabverifyResult = ((bool)(results[0]));
+            LabverifyResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void LabverifyAsync(string name, string location) {
+            this.LabverifyAsync(name, location, null);
+        }
+        
+        /// <remarks/>
+        public void LabverifyAsync(string name, string location, object userState) {
+            if ((this.LabverifyOperationCompleted == null)) {
+                this.LabverifyOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLabverifyOperationCompleted);
+            }
+            this.InvokeAsync("Labverify", new object[] {
+                        name,
+                        location}, this.LabverifyOperationCompleted, userState);
+        }
+        
+        private void OnLabverifyOperationCompleted(object arg) {
+            if ((this.LabverifyCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.LabverifyCompleted(this, new LabverifyCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddLab", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void AddLab([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, out bool AddLabResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddLabResultSpecified) {
+        public void AddLab([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, out bool AddLabResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddLabResultSpecified) {
             object[] results = this.Invoke("AddLab", new object[] {
                         username,
-                        location,
-                        day});
+                        location});
             AddLabResult = ((bool)(results[0]));
             AddLabResultSpecified = ((bool)(results[1]));
         }
         
         /// <remarks/>
-        public void AddLabAsync(string username, string location, string day) {
-            this.AddLabAsync(username, location, day, null);
+        public void AddLabAsync(string username, string location) {
+            this.AddLabAsync(username, location, null);
         }
         
         /// <remarks/>
-        public void AddLabAsync(string username, string location, string day, object userState) {
+        public void AddLabAsync(string username, string location, object userState) {
             if ((this.AddLabOperationCompleted == null)) {
                 this.AddLabOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddLabOperationCompleted);
             }
             this.InvokeAsync("AddLab", new object[] {
                         username,
-                        location,
-                        day}, this.AddLabOperationCompleted, userState);
+                        location}, this.AddLabOperationCompleted, userState);
         }
         
         private void OnAddLabOperationCompleted(object arg) {
@@ -698,7 +774,7 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -745,7 +821,7 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -780,7 +856,7 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1273,6 +1349,40 @@ namespace Medicall_Forms.server {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void DocverifyCompletedEventHandler(object sender, DocverifyCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DocverifyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DocverifyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool DocverifyResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool DocverifyResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void SearchDocCompletedEventHandler(object sender, SearchDocCompletedEventArgs e);
     
     /// <remarks/>
@@ -1319,6 +1429,40 @@ namespace Medicall_Forms.server {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((Lab[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void LabverifyCompletedEventHandler(object sender, LabverifyCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class LabverifyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal LabverifyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool LabverifyResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool LabverifyResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
             }
         }
     }
