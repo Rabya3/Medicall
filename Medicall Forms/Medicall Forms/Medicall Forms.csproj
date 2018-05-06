@@ -108,6 +108,30 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchAdminDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchAdminDoc.Designer.cs">
+      <DependentUpon>SearchAdminDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showDoc.Designer.cs">
+      <DependentUpon>showDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowLAb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowLAb.Designer.cs">
+      <DependentUpon>ShowLAb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SLabAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SLabAdmin.Designer.cs">
+      <DependentUpon>SLabAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Updateinfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +228,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchAdminDoc.resx">
+      <DependentUpon>SearchAdminDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showDoc.resx">
+      <DependentUpon>showDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowLAb.resx">
+      <DependentUpon>ShowLAb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SLabAdmin.resx">
+      <DependentUpon>SLabAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Updateinfo.resx">
       <DependentUpon>Updateinfo.cs</DependentUpon>

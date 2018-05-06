@@ -59,5 +59,38 @@ namespace Medicall_Forms
             l.Show();
             this.Hide();
         }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            showDoc s = showDoc.getinstance();
+            s.Show();
+            this.Hide();
+        }
+
+        private void linkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
+
+        private void Loginlabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SearchAdminDoc D = new SearchAdminDoc();
+            D.Show();
+            this.Hide();
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ShowLAb s = new ShowLAb();
+            s.Show();
+            this.Hide();
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SLabAdmin s = new SLabAdmin();
+            s.Show();
+            this.Hide();
+        }
     }
 }

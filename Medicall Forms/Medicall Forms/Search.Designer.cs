@@ -166,6 +166,7 @@
             this.specialtxt.Size = new System.Drawing.Size(189, 24);
             this.specialtxt.TabIndex = 113;
             this.specialtxt.Text = "-Select your specialization";
+            this.specialtxt.SelectedIndexChanged += new System.EventHandler(this.specialtxt_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -177,6 +178,7 @@
             this.label14.Size = new System.Drawing.Size(107, 23);
             this.label14.TabIndex = 112;
             this.label14.Text = "Location  🏠";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label17
             // 
@@ -188,6 +190,7 @@
             this.label17.Size = new System.Drawing.Size(149, 23);
             this.label17.TabIndex = 111;
             this.label17.Text = "Specialization  💉";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // button1
             // 
@@ -230,6 +233,7 @@
             this.comboBox1.Size = new System.Drawing.Size(189, 24);
             this.comboBox1.TabIndex = 140;
             this.comboBox1.Text = "-Select a Place";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Search
             // 

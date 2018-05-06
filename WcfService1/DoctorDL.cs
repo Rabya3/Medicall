@@ -117,5 +117,23 @@ namespace WcfService1
             }
             return DocList;
         }
+        public List<Doctor> ShowDoc()
+        {
+            return DocV;
+        }
+        public List<Doctor> SearchDocAdmin(string speciality,string location)
+            {
+            List<Doctor> DocL = new List<Doctor>();
+            foreach (Doctor u in DoctorDL.DocV)
+            {
+                if (u.Specialization == speciality && u.Location == location)
+                {
+                    DocL.Add(u);
+                }
+            }
+            return DocL;
+        }
+
+
     }
 }

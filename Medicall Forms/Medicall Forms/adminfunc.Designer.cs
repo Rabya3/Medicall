@@ -43,6 +43,7 @@
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel11 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLabel3
@@ -134,6 +135,7 @@
             this.Loginlabel.TabIndex = 79;
             this.Loginlabel.TabStop = true;
             this.Loginlabel.Text = "⚫️ Search Doctor";
+            this.Loginlabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Loginlabel_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -172,6 +174,7 @@
             this.linkLabel6.TabIndex = 82;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "⚫️ Search Lab";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // linkLabel8
             // 
@@ -184,6 +187,7 @@
             this.linkLabel8.TabIndex = 84;
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "⚫️ Showall Labs\r\n";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
             // 
             // linkLabel7
             // 
@@ -196,6 +200,7 @@
             this.linkLabel7.TabIndex = 85;
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Text = "⚫️ Showall Doctors\r\n\r\n";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
             // linkLabel10
             // 
@@ -223,12 +228,26 @@
             this.linkLabel9.Text = "⚫️ Verify Doctor\r\n";
             this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
             // 
+            // linkLabel11
+            // 
+            this.linkLabel11.AutoSize = true;
+            this.linkLabel11.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel11.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel11.Location = new System.Drawing.Point(249, 218);
+            this.linkLabel11.Name = "linkLabel11";
+            this.linkLabel11.Size = new System.Drawing.Size(186, 23);
+            this.linkLabel11.TabIndex = 90;
+            this.linkLabel11.TabStop = true;
+            this.linkLabel11.Text = "⚫️ Add/Delete Doctor";
+            this.linkLabel11.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel11_LinkClicked);
+            // 
             // adminfunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 459);
+            this.Controls.Add(this.linkLabel11);
             this.Controls.Add(this.linkLabel10);
             this.Controls.Add(this.linkLabel9);
             this.Controls.Add(this.linkLabel7);
@@ -269,5 +288,6 @@
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.LinkLabel linkLabel9;
+        private System.Windows.Forms.LinkLabel linkLabel11;
     }
 }

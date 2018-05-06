@@ -43,6 +43,21 @@ namespace WcfService1
             }
             return LabList;
         }
-       
+        public List<Lab> ShowLab()
+        {
+            return LV;
+        }
+        public List<Lab> SearchLabAdmin(string location)
+        {
+            List<Lab> LabL = new List<Lab>();
+            foreach (Lab u in LabDL.LV)
+            {
+                if (u.Location == location)
+                {
+                    LabL.Add(u);
+                }
+            }
+            return LabL;
+        }
     }
 }

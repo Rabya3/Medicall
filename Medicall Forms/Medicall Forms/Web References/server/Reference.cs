@@ -63,6 +63,14 @@ namespace Medicall_Forms.server {
         
         private System.Threading.SendOrPostCallback AddLabOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ShowDocOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SearchDocAdminOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SearchLabAdminOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ShowLabOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -151,6 +159,18 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         public event AddLabCompletedEventHandler AddLabCompleted;
+        
+        /// <remarks/>
+        public event ShowDocCompletedEventHandler ShowDocCompleted;
+        
+        /// <remarks/>
+        public event SearchDocAdminCompletedEventHandler SearchDocAdminCompleted;
+        
+        /// <remarks/>
+        public event SearchLabAdminCompletedEventHandler SearchLabAdminCompleted;
+        
+        /// <remarks/>
+        public event ShowLabCompletedEventHandler ShowLabCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -751,6 +771,128 @@ namespace Medicall_Forms.server {
             if ((this.AddLabCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.AddLabCompleted(this, new AddLabCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ShowDoc", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Doctor[] ShowDoc() {
+            object[] results = this.Invoke("ShowDoc", new object[0]);
+            return ((Doctor[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ShowDocAsync() {
+            this.ShowDocAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ShowDocAsync(object userState) {
+            if ((this.ShowDocOperationCompleted == null)) {
+                this.ShowDocOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowDocOperationCompleted);
+            }
+            this.InvokeAsync("ShowDoc", new object[0], this.ShowDocOperationCompleted, userState);
+        }
+        
+        private void OnShowDocOperationCompleted(object arg) {
+            if ((this.ShowDocCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ShowDocCompleted(this, new ShowDocCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchDocAdmin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Doctor[] SearchDocAdmin([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location) {
+            object[] results = this.Invoke("SearchDocAdmin", new object[] {
+                        speciality,
+                        location});
+            return ((Doctor[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SearchDocAdminAsync(string speciality, string location) {
+            this.SearchDocAdminAsync(speciality, location, null);
+        }
+        
+        /// <remarks/>
+        public void SearchDocAdminAsync(string speciality, string location, object userState) {
+            if ((this.SearchDocAdminOperationCompleted == null)) {
+                this.SearchDocAdminOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSearchDocAdminOperationCompleted);
+            }
+            this.InvokeAsync("SearchDocAdmin", new object[] {
+                        speciality,
+                        location}, this.SearchDocAdminOperationCompleted, userState);
+        }
+        
+        private void OnSearchDocAdminOperationCompleted(object arg) {
+            if ((this.SearchDocAdminCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SearchDocAdminCompleted(this, new SearchDocAdminCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchLabAdmin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Lab[] SearchLabAdmin([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location) {
+            object[] results = this.Invoke("SearchLabAdmin", new object[] {
+                        location});
+            return ((Lab[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SearchLabAdminAsync(string location) {
+            this.SearchLabAdminAsync(location, null);
+        }
+        
+        /// <remarks/>
+        public void SearchLabAdminAsync(string location, object userState) {
+            if ((this.SearchLabAdminOperationCompleted == null)) {
+                this.SearchLabAdminOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSearchLabAdminOperationCompleted);
+            }
+            this.InvokeAsync("SearchLabAdmin", new object[] {
+                        location}, this.SearchLabAdminOperationCompleted, userState);
+        }
+        
+        private void OnSearchLabAdminOperationCompleted(object arg) {
+            if ((this.SearchLabAdminCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SearchLabAdminCompleted(this, new SearchLabAdminCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ShowLab", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Lab[] ShowLab() {
+            object[] results = this.Invoke("ShowLab", new object[0]);
+            return ((Lab[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ShowLabAsync() {
+            this.ShowLabAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ShowLabAsync(object userState) {
+            if ((this.ShowLabOperationCompleted == null)) {
+                this.ShowLabOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowLabOperationCompleted);
+            }
+            this.InvokeAsync("ShowLab", new object[0], this.ShowLabOperationCompleted, userState);
+        }
+        
+        private void OnShowLabOperationCompleted(object arg) {
+            if ((this.ShowLabCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ShowLabCompleted(this, new ShowLabCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1497,6 +1639,110 @@ namespace Medicall_Forms.server {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ShowDocCompletedEventHandler(object sender, ShowDocCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ShowDocCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ShowDocCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Doctor[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Doctor[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void SearchDocAdminCompletedEventHandler(object sender, SearchDocAdminCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SearchDocAdminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SearchDocAdminCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Doctor[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Doctor[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void SearchLabAdminCompletedEventHandler(object sender, SearchLabAdminCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SearchLabAdminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SearchLabAdminCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Lab[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Lab[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ShowLabCompletedEventHandler(object sender, ShowLabCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ShowLabCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ShowLabCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Lab[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Lab[])(this.results[0]));
             }
         }
     }

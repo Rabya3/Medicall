@@ -51,5 +51,25 @@ namespace Medicall_Forms
         {
 
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void specialtxt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

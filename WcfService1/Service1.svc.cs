@@ -128,5 +128,30 @@ namespace WcfService1
             bool D = Dr.AddLab(username, location);
             return D;
         }
+        public List<Doctor> ShowDoc()
+        {
+            DoctorDL Dr = new DoctorDL();
+            List<Doctor> D = Dr.ShowDoc();
+            return D;
+        }
+        public List<Doctor> SearchDocAdmin(string speciality, string location)
+        {
+            DoctorDL Dr = new DoctorDL();
+            List<Doctor> D = Dr.SearchDocAdmin(speciality, location);
+            return D;
+        }
+        public List<Lab> SearchLabAdmin(string location)
+        {
+            LabDL D = new LabDL();
+            List<Lab> Dr = D.SearchLabAdmin(location);
+            return Dr;
+        }
+        public List<Lab> ShowLab()
+        {
+            LabDL D = new LabDL();
+            List<Lab> Dr = D.ShowLab();
+            return Dr;
+
+        }
     }
 }

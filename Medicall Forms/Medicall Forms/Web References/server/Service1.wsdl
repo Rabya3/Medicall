@@ -109,6 +109,30 @@
   <wsdl:message name="IService1_AddLab_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddLabResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_ShowDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowDoc" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchDocAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDocAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchDocAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDocAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchLabAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchLabAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchLabAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchLabAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowLab_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowLab" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowLab_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowLabResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -177,6 +201,22 @@
     <wsdl:operation name="AddLab">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddLab" message="tns:IService1_AddLab_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddLabResponse" message="tns:IService1_AddLab_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowDoc" message="tns:IService1_ShowDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowDocResponse" message="tns:IService1_ShowDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDocAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchDocAdmin" message="tns:IService1_SearchDocAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchDocAdminResponse" message="tns:IService1_SearchDocAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchLabAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchLabAdmin" message="tns:IService1_SearchLabAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchLabAdminResponse" message="tns:IService1_SearchLabAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowLab">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowLab" message="tns:IService1_ShowLab_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowLabResponse" message="tns:IService1_ShowLab_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -327,6 +367,42 @@
     </wsdl:operation>
     <wsdl:operation name="AddLab">
       <soap:operation soapAction="http://tempuri.org/IService1/AddLab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowDoc">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDocAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchDocAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchLabAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchLabAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowLab">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowLab" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

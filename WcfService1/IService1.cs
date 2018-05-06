@@ -51,6 +51,16 @@ namespace WcfService1
         bool Labverify(string name, string location);
         [OperationContract]
         bool AddLab(string username, string location);
+        [OperationContract]
+        List<Doctor> ShowDoc();
+        [OperationContract]
+        List<Doctor> SearchDocAdmin(string speciality, string location);
+        [OperationContract]
+        List<Lab> SearchLabAdmin(string location);
+        [OperationContract]
+        List<Lab> ShowLab();
+
+
 
 
 
