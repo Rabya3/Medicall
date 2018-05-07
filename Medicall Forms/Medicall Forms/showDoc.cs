@@ -34,5 +34,12 @@ namespace Medicall_Forms
             S.DataSource = list;
             dataGridView1.DataSource = S;
         }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            adminfunc f = adminfunc.getinstance();
+            f.Show();
+            this.Hide();
+        }
     }
 }

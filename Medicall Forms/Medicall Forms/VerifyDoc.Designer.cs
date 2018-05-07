@@ -37,13 +37,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.specialtxt = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.idtxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // locationtxt
@@ -161,19 +163,6 @@
             this.label17.TabIndex = 133;
             this.label17.Text = "Specialization  💉";
             // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel3.Location = new System.Drawing.Point(428, 16);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(49, 18);
-            this.linkLabel3.TabIndex = 132;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Home";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
@@ -246,12 +235,47 @@
             this.linkLabel1.Text = "Contact Us";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel4.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel4.Location = new System.Drawing.Point(45, 462);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(66, 29);
+            this.linkLabel4.TabIndex = 140;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Back";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Navy;
+            this.label11.Location = new System.Drawing.Point(329, 118);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 23);
+            this.label11.TabIndex = 142;
+            this.label11.Text = "Id";
+            // 
+            // idtxt
+            // 
+            this.idtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idtxt.Location = new System.Drawing.Point(324, 147);
+            this.idtxt.Name = "idtxt";
+            this.idtxt.Size = new System.Drawing.Size(149, 26);
+            this.idtxt.TabIndex = 141;
+            // 
             // VerifyDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(744, 500);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.idtxt);
+            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.locationtxt);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
@@ -261,7 +285,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.specialtxt);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -286,12 +309,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox specialtxt;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox idtxt;
     }
 }

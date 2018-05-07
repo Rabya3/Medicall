@@ -23,7 +23,7 @@ namespace Medicall_Forms.server {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
@@ -74,6 +74,8 @@ namespace Medicall_Forms.server {
         private System.Threading.SendOrPostCallback DelDOperationCompleted;
         
         private System.Threading.SendOrPostCallback DelLabOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ShowallbloodOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -183,6 +185,9 @@ namespace Medicall_Forms.server {
         public event DelLabCompletedEventHandler DelLabCompleted;
         
         /// <remarks/>
+        public event ShowallbloodCompletedEventHandler ShowallbloodCompleted;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string GetData(int value, [System.Xml.Serialization.XmlIgnoreAttribute()] bool valueSpecified) {
@@ -246,10 +251,11 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Dregister", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void Dregister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, out bool DregisterResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DregisterResultSpecified) {
+        public void Dregister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string id, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string question, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string answer, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, out bool DregisterResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DregisterResultSpecified) {
             object[] results = this.Invoke("Dregister", new object[] {
                         username,
                         password,
+                        id,
                         question,
                         answer,
                         speciality,
@@ -263,18 +269,19 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
-        public void DregisterAsync(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day) {
-            this.DregisterAsync(username, password, question, answer, speciality, phone, location, fee, time, day, null);
+        public void DregisterAsync(string username, string password, string id, string question, string answer, string speciality, string phone, string location, string fee, string time, string day) {
+            this.DregisterAsync(username, password, id, question, answer, speciality, phone, location, fee, time, day, null);
         }
         
         /// <remarks/>
-        public void DregisterAsync(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day, object userState) {
+        public void DregisterAsync(string username, string password, string id, string question, string answer, string speciality, string phone, string location, string fee, string time, string day, object userState) {
             if ((this.DregisterOperationCompleted == null)) {
                 this.DregisterOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDregisterOperationCompleted);
             }
             this.InvokeAsync("Dregister", new object[] {
                         username,
                         password,
+                        id,
                         question,
                         answer,
                         speciality,
@@ -468,9 +475,10 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Updateinfo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void Updateinfo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, out bool UpdateinfoResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateinfoResultSpecified) {
+        public void Updateinfo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string id, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, out bool UpdateinfoResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateinfoResultSpecified) {
             object[] results = this.Invoke("Updateinfo", new object[] {
                         username,
+                        id,
                         phone,
                         speciality,
                         location,
@@ -482,17 +490,18 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
-        public void UpdateinfoAsync(string username, string phone, string speciality, string location, string time, string day, string fee) {
-            this.UpdateinfoAsync(username, phone, speciality, location, time, day, fee, null);
+        public void UpdateinfoAsync(string username, string id, string phone, string speciality, string location, string time, string day, string fee) {
+            this.UpdateinfoAsync(username, id, phone, speciality, location, time, day, fee, null);
         }
         
         /// <remarks/>
-        public void UpdateinfoAsync(string username, string phone, string speciality, string location, string time, string day, string fee, object userState) {
+        public void UpdateinfoAsync(string username, string id, string phone, string speciality, string location, string time, string day, string fee, object userState) {
             if ((this.UpdateinfoOperationCompleted == null)) {
                 this.UpdateinfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateinfoOperationCompleted);
             }
             this.InvokeAsync("Updateinfo", new object[] {
                         username,
+                        id,
                         phone,
                         speciality,
                         location,
@@ -578,9 +587,10 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddDoctor", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void AddDoctor([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, out bool AddDoctorResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddDoctorResultSpecified) {
+        public void AddDoctor([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string id, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string phone, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, out bool AddDoctorResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddDoctorResultSpecified) {
             object[] results = this.Invoke("AddDoctor", new object[] {
                         username,
+                        id,
                         phone,
                         speciality,
                         location,
@@ -592,17 +602,18 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
-        public void AddDoctorAsync(string username, string phone, string speciality, string location, string time, string day, string fee) {
-            this.AddDoctorAsync(username, phone, speciality, location, time, day, fee, null);
+        public void AddDoctorAsync(string username, string id, string phone, string speciality, string location, string time, string day, string fee) {
+            this.AddDoctorAsync(username, id, phone, speciality, location, time, day, fee, null);
         }
         
         /// <remarks/>
-        public void AddDoctorAsync(string username, string phone, string speciality, string location, string time, string day, string fee, object userState) {
+        public void AddDoctorAsync(string username, string id, string phone, string speciality, string location, string time, string day, string fee, object userState) {
             if ((this.AddDoctorOperationCompleted == null)) {
                 this.AddDoctorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddDoctorOperationCompleted);
             }
             this.InvokeAsync("AddDoctor", new object[] {
                         username,
+                        id,
                         phone,
                         speciality,
                         location,
@@ -620,9 +631,10 @@ namespace Medicall_Forms.server {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Docverify", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void Docverify([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, out bool DocverifyResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DocverifyResultSpecified) {
+        public void Docverify([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string id, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string speciality, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string fee, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string location, out bool DocverifyResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DocverifyResultSpecified) {
             object[] results = this.Invoke("Docverify", new object[] {
                         name,
+                        id,
                         speciality,
                         fee,
                         location});
@@ -631,17 +643,18 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
-        public void DocverifyAsync(string name, string speciality, string fee, string location) {
-            this.DocverifyAsync(name, speciality, fee, location, null);
+        public void DocverifyAsync(string name, string id, string speciality, string fee, string location) {
+            this.DocverifyAsync(name, id, speciality, fee, location, null);
         }
         
         /// <remarks/>
-        public void DocverifyAsync(string name, string speciality, string fee, string location, object userState) {
+        public void DocverifyAsync(string name, string id, string speciality, string fee, string location, object userState) {
             if ((this.DocverifyOperationCompleted == null)) {
                 this.DocverifyOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDocverifyOperationCompleted);
             }
             this.InvokeAsync("Docverify", new object[] {
                         name,
+                        id,
                         speciality,
                         fee,
                         location}, this.DocverifyOperationCompleted, userState);
@@ -971,6 +984,35 @@ namespace Medicall_Forms.server {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Showallblood", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public blood[] Showallblood() {
+            object[] results = this.Invoke("Showallblood", new object[0]);
+            return ((blood[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ShowallbloodAsync() {
+            this.ShowallbloodAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ShowallbloodAsync(object userState) {
+            if ((this.ShowallbloodOperationCompleted == null)) {
+                this.ShowallbloodOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowallbloodOperationCompleted);
+            }
+            this.InvokeAsync("Showallblood", new object[0], this.ShowallbloodOperationCompleted, userState);
+        }
+        
+        private void OnShowallbloodOperationCompleted(object arg) {
+            if ((this.ShowallbloodCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ShowallbloodCompleted(this, new ShowallbloodCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -1042,6 +1084,67 @@ namespace Medicall_Forms.server {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+    public partial class blood {
+        
+        private string addressField;
+        
+        private string contactField;
+        
+        private string groupField;
+        
+        private string nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Contact {
+            get {
+                return this.contactField;
+            }
+            set {
+                this.contactField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Group {
+            get {
+                return this.groupField;
+            }
+            set {
+                this.groupField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
     public partial class Lab {
         
         private string locationField;
@@ -1083,6 +1186,8 @@ namespace Medicall_Forms.server {
         
         private string feeField;
         
+        private string idField;
+        
         private string locationField;
         
         private string phoneField;
@@ -1112,6 +1217,17 @@ namespace Medicall_Forms.server {
             }
             set {
                 this.feeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
             }
         }
         
@@ -1172,11 +1288,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1198,11 +1314,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void GetDataUsingDataContractCompletedEventHandler(object sender, GetDataUsingDataContractCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataUsingDataContractCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1224,11 +1340,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void DregisterCompletedEventHandler(object sender, DregisterCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DregisterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1258,11 +1374,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void DrisvalidCompletedEventHandler(object sender, DrisvalidCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DrisvalidCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1292,11 +1408,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void PregisterCompletedEventHandler(object sender, PregisterCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class PregisterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1326,11 +1442,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void PisvalidCompletedEventHandler(object sender, PisvalidCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class PisvalidCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1360,11 +1476,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void DresetCompletedEventHandler(object sender, DresetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DresetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1394,11 +1510,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void PresetCompletedEventHandler(object sender, PresetCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class PresetCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1428,11 +1544,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void UpdateinfoCompletedEventHandler(object sender, UpdateinfoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateinfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1462,11 +1578,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void bregisterCompletedEventHandler(object sender, bregisterCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class bregisterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1496,11 +1612,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void AregisterCompletedEventHandler(object sender, AregisterCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AregisterCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1530,11 +1646,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void AddDoctorCompletedEventHandler(object sender, AddDoctorCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AddDoctorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1564,11 +1680,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void DocverifyCompletedEventHandler(object sender, DocverifyCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DocverifyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1598,11 +1714,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void SearchDocCompletedEventHandler(object sender, SearchDocCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SearchDocCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1624,11 +1740,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void SearchLabCompletedEventHandler(object sender, SearchLabCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SearchLabCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1650,11 +1766,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void LabverifyCompletedEventHandler(object sender, LabverifyCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class LabverifyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1684,11 +1800,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void AddLabCompletedEventHandler(object sender, AddLabCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AddLabCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1718,11 +1834,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void ShowDocCompletedEventHandler(object sender, ShowDocCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ShowDocCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1744,11 +1860,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void SearchDocAdminCompletedEventHandler(object sender, SearchDocAdminCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SearchDocAdminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1770,11 +1886,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void SearchLabAdminCompletedEventHandler(object sender, SearchLabAdminCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SearchLabAdminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1796,11 +1912,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void ShowLabCompletedEventHandler(object sender, ShowLabCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ShowLabCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1822,11 +1938,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void DelDCompletedEventHandler(object sender, DelDCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DelDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1856,11 +1972,11 @@ namespace Medicall_Forms.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void DelLabCompletedEventHandler(object sender, DelLabCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DelLabCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1885,6 +2001,32 @@ namespace Medicall_Forms.server {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    public delegate void ShowallbloodCompletedEventHandler(object sender, ShowallbloodCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ShowallbloodCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ShowallbloodCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public blood[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((blood[])(this.results[0]));
             }
         }
     }

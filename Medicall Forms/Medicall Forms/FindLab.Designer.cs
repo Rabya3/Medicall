@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,20 +38,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.locationtxt = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel3.Location = new System.Drawing.Point(467, 11);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(49, 18);
-            this.linkLabel3.TabIndex = 79;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Home";
             // 
             // panel2
             // 
@@ -172,17 +160,30 @@
             this.label14.TabIndex = 120;
             this.label14.Text = "Location  🏠";
             // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel4.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel4.Location = new System.Drawing.Point(31, 453);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(66, 29);
+            this.linkLabel4.TabIndex = 175;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Back";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
             // FindLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(758, 491);
+            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.locationtxt);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -199,8 +200,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -211,5 +210,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox locationtxt;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.LinkLabel linkLabel4;
     }
 }

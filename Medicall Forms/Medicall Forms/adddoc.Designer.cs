@@ -51,6 +51,9 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.idtxt = new System.Windows.Forms.TextBox();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // Dnametxt
@@ -178,7 +181,7 @@
             this.Pregbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Pregbtn.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pregbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Pregbtn.Location = new System.Drawing.Point(373, 401);
+            this.Pregbtn.Location = new System.Drawing.Point(436, 430);
             this.Pregbtn.Name = "Pregbtn";
             this.Pregbtn.Size = new System.Drawing.Size(120, 43);
             this.Pregbtn.TabIndex = 104;
@@ -314,7 +317,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(545, 401);
+            this.button1.Location = new System.Drawing.Point(605, 430);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 43);
             this.button1.TabIndex = 122;
@@ -333,12 +336,48 @@
             this.label6.TabIndex = 123;
             this.label6.Text = "Name  👨";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Navy;
+            this.label11.Location = new System.Drawing.Point(315, 352);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 23);
+            this.label11.TabIndex = 125;
+            this.label11.Text = "Id";
+            // 
+            // idtxt
+            // 
+            this.idtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idtxt.Location = new System.Drawing.Point(310, 381);
+            this.idtxt.Name = "idtxt";
+            this.idtxt.Size = new System.Drawing.Size(183, 26);
+            this.idtxt.TabIndex = 124;
+            this.idtxt.TextChanged += new System.EventHandler(this.idtxt_TextChanged);
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel4.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel4.Location = new System.Drawing.Point(75, 443);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(66, 29);
+            this.linkLabel4.TabIndex = 126;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Back";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
             // adddoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(753, 485);
+            this.Controls.Add(this.linkLabel4);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.idtxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel3);
@@ -394,5 +433,8 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox idtxt;
+        private System.Windows.Forms.LinkLabel linkLabel4;
     }
 }

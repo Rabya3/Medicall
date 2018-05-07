@@ -41,6 +41,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Pregbtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLabel3
@@ -196,12 +197,26 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel4.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel4.Location = new System.Drawing.Point(51, 421);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(66, 29);
+            this.linkLabel4.TabIndex = 175;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Back";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
             // AddLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(694, 508);
+            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Pregbtn);
             this.Controls.Add(this.label11);
@@ -237,5 +252,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Pregbtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel linkLabel4;
     }
 }

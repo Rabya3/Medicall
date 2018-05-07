@@ -52,7 +52,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.feetxt = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.phonetxt = new System.Windows.Forms.TextBox();
             this.daytxt = new System.Windows.Forms.ComboBox();
             this.timingstxt = new System.Windows.Forms.ComboBox();
@@ -62,6 +61,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.idtxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel2
@@ -337,18 +338,6 @@
             this.label10.TabIndex = 109;
             this.label10.Text = "Fee  💵";
             // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel4.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel4.Location = new System.Drawing.Point(91, 576);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(211, 18);
-            this.linkLabel4.TabIndex = 108;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Update your Location/Timings ";
-            // 
             // phonetxt
             // 
             this.phonetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,19 +456,39 @@
             this.label17.TabIndex = 98;
             this.label17.Text = "Specialization  💉";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Navy;
+            this.label11.Location = new System.Drawing.Point(486, 257);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 23);
+            this.label11.TabIndex = 117;
+            this.label11.Text = "Id";
+            // 
+            // idtxt
+            // 
+            this.idtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idtxt.Location = new System.Drawing.Point(481, 286);
+            this.idtxt.Name = "idtxt";
+            this.idtxt.Size = new System.Drawing.Size(149, 26);
+            this.idtxt.TabIndex = 116;
+            // 
             // DrReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(794, 524);
+            this.ClientSize = new System.Drawing.Size(794, 589);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.idtxt);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.feetxt);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.phonetxt);
             this.Controls.Add(this.daytxt);
             this.Controls.Add(this.timingstxt);
@@ -541,7 +550,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox feetxt;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.TextBox phonetxt;
         private System.Windows.Forms.ComboBox daytxt;
         private System.Windows.Forms.ComboBox timingstxt;
@@ -551,5 +559,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox idtxt;
     }
 }

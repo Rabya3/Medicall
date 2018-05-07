@@ -31,7 +31,7 @@ namespace Medicall_Forms
             bool validuser;
             bool passed;
             server.Service1 server = new server.Service1();
-            server.Updateinfo(Dnametxt.Text,phonetxt.Text,specialtxt.Text,locationtxt.Text,timingstxt.Text,daytxt.Text,feetxt.Text, out validuser, out passed);
+            server.Updateinfo(Dnametxt.Text,idtxt.Text,phonetxt.Text,specialtxt.Text,locationtxt.Text,timingstxt.Text,daytxt.Text,feetxt.Text, out validuser, out passed);
             if (validuser == true)
             {
                 MessageBox.Show("Welcome to team MEDI-CALL");
@@ -132,6 +132,13 @@ namespace Medicall_Forms
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel4_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
         }
     }
 }

@@ -44,6 +44,7 @@
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.linkLabel11 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel12 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLabel3
@@ -57,6 +58,7 @@
             this.linkLabel3.TabIndex = 78;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Home";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // panel2
             // 
@@ -233,13 +235,26 @@
             this.linkLabel11.AutoSize = true;
             this.linkLabel11.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel11.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel11.Location = new System.Drawing.Point(249, 218);
+            this.linkLabel11.Location = new System.Drawing.Point(318, 226);
             this.linkLabel11.Name = "linkLabel11";
-            this.linkLabel11.Size = new System.Drawing.Size(186, 23);
+            this.linkLabel11.Size = new System.Drawing.Size(140, 23);
             this.linkLabel11.TabIndex = 90;
             this.linkLabel11.TabStop = true;
-            this.linkLabel11.Text = "⚫️ Add/Delete Doctor";
-            this.linkLabel11.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel11_LinkClicked);
+            this.linkLabel11.Text = "⚫️ Blood Donors";
+            this.linkLabel11.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel11_LinkClicked_1);
+            // 
+            // linkLabel12
+            // 
+            this.linkLabel12.AutoSize = true;
+            this.linkLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel12.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel12.Location = new System.Drawing.Point(602, 107);
+            this.linkLabel12.Name = "linkLabel12";
+            this.linkLabel12.Size = new System.Drawing.Size(61, 18);
+            this.linkLabel12.TabIndex = 91;
+            this.linkLabel12.TabStop = true;
+            this.linkLabel12.Text = "Log Out";
+            this.linkLabel12.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel12_LinkClicked);
             // 
             // adminfunc
             // 
@@ -247,6 +262,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 459);
+            this.Controls.Add(this.linkLabel12);
             this.Controls.Add(this.linkLabel11);
             this.Controls.Add(this.linkLabel10);
             this.Controls.Add(this.linkLabel9);
@@ -289,5 +305,6 @@
         private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.LinkLabel linkLabel11;
+        private System.Windows.Forms.LinkLabel linkLabel12;
     }
 }

@@ -32,7 +32,7 @@ namespace Medicall_Forms
             bool validuser;
             bool passed;
             server.Service1 server = new server.Service1();
-            server.AddDoctor(Dnametxt.Text, phonetxt.Text, specialtxt.Text, locationtxt.Text, timingstxt.Text, daytxt.Text, feetxt.Text, out validuser, out passed);
+            server.AddDoctor(Dnametxt.Text,idtxt.Text, phonetxt.Text, specialtxt.Text, locationtxt.Text, timingstxt.Text, daytxt.Text, feetxt.Text, out validuser, out passed);
             if (validuser == true)
             {
                 MessageBox.Show("Sucessfully Added");
@@ -44,6 +44,7 @@ namespace Medicall_Forms
 
             }
             Dnametxt.Text = "";
+            idtxt.Text = "";
             phonetxt.Text = "";
             specialtxt.Text = "";
             locationtxt.Text = "";
@@ -90,6 +91,18 @@ namespace Medicall_Forms
             timingstxt.Text = "";
             feetxt.Text = "";
             daytxt.Text = "";
+        }
+
+        private void idtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            adminfunc f = adminfunc.getinstance();
+            f.Show();
+            this.Hide();
         }
     }
 }

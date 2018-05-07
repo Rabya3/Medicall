@@ -20,6 +20,7 @@ namespace WcfService1
         private string time;
         private string phone;
         private string fee;
+        private string id;
 
         public string Dpassword
         {
@@ -162,6 +163,19 @@ namespace WcfService1
             set
             {
                 username = value;
+            }
+        }
+        [DataMember]
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
             }
         }
     }

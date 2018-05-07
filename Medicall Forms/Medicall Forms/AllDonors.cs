@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace Medicall_Forms
 {
-    public partial class SLabAdmin : Form
+    public partial class AllDonors : Form
     {
-        public SLabAdmin()
+        public AllDonors()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            server.Service1 Oserver = new server.Service1();
-            List<server.Lab> list = Oserver.SearchLabAdmin(comboBox1.Text).ToList<server.Lab>();
-            BindingSource S = new BindingSource();
-            S.DataSource = list;
-            dataGridView1.DataSource = S;
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.Pregbtn = new System.Windows.Forms.Button();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -140,18 +139,6 @@
             this.Pregbtn.UseVisualStyleBackColor = false;
             this.Pregbtn.Click += new System.EventHandler(this.Pregbtn_Click);
             // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel3.Location = new System.Drawing.Point(467, 13);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(49, 18);
-            this.linkLabel3.TabIndex = 71;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Home";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
@@ -248,7 +235,6 @@
             this.ClientSize = new System.Drawing.Size(758, 457);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -283,7 +269,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button Pregbtn;
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

@@ -39,7 +39,6 @@
             this.rnametxt = new System.Windows.Forms.TextBox();
             this.resetbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -168,18 +167,6 @@
             this.label3.TabIndex = 54;
             this.label3.Text = "Password Recovery";
             // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel3.Location = new System.Drawing.Point(458, 23);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(49, 18);
-            this.linkLabel3.TabIndex = 53;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Home";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
@@ -263,7 +250,6 @@
             this.Controls.Add(this.rnametxt);
             this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -290,7 +276,6 @@
         private System.Windows.Forms.TextBox rnametxt;
         private System.Windows.Forms.Button resetbtn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;

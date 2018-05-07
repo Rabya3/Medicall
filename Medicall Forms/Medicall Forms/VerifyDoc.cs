@@ -57,7 +57,7 @@ namespace Medicall_Forms
             bool validuser;
             bool passed;
             server.Service1 server = new server.Service1();
-            server.Docverify(textBox1.Text, specialtxt.Text, feetxt.Text, locationtxt.Text, out validuser, out passed);
+            server.Docverify(textBox1.Text,idtxt.Text, specialtxt.Text, feetxt.Text, locationtxt.Text, out validuser, out passed);
             if (validuser == true)
             {
                 MessageBox.Show("Verified");
@@ -70,6 +70,13 @@ namespace Medicall_Forms
             specialtxt.Text = "";
             feetxt.Text = "";
             locationtxt.Text = "";
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            adminfunc f = adminfunc.getinstance();
+            f.Show();
+            this.Hide();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace WcfService1
         {
             bool valid;
 
-            if (!(password == cpassword))
+            if (password!=cpassword)
             {
                 valid = false;
             }

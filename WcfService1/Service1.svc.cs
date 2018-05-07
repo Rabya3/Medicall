@@ -30,10 +30,10 @@ namespace WcfService1
             return composite;
         }
 
-        public bool Dregister(string username, string password, string question, string answer, string speciality, string phone, string location, string fee, string time, string day)
+        public bool Dregister(string username, string password,string id, string question, string answer, string speciality, string phone, string location, string fee, string time, string day)
         {
             DoctorDL Dr = new DoctorDL();
-            bool Dregister = Dr.Dregister(username, password, question, answer, speciality, phone, location, fee, time, day);
+            bool Dregister = Dr.Dregister(username, password,id, question, answer, speciality, phone, location, fee, time, day);
             return Dregister;
         }
 
@@ -72,10 +72,10 @@ namespace WcfService1
             return Pt;
         }
 
-        public bool Updateinfo(string username, string phone, string speciality, string location, string time, string day, string fee)
+        public bool Updateinfo(string username,string id, string phone, string speciality, string location, string time, string day, string fee)
         {
             DoctorDL Dr = new DoctorDL();
-            bool D = Dr.Updateinfo(username, phone, speciality, location, time, day, fee);
+            bool D = Dr.Updateinfo(username,id, phone, speciality, location, time, day, fee);
             return D;
 
         }
@@ -92,16 +92,16 @@ namespace WcfService1
             bool D = Dr.Aregister(username, password);
             return D;
         }
-        public bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee)
+        public bool AddDoctor(string username,string id, string phone, string speciality, string location, string time, string day, string fee)
         {
             DoctorDL Dr = new DoctorDL();
-            bool D = Dr.AddDoctor(username, phone, speciality, location, time, day, fee);
+            bool D = Dr.AddDoctor(username,id, phone, speciality, location, time, day, fee);
             return D;
         }
-        public bool Docverify(string name, string speciality, string fee, string location)
+        public bool Docverify(string name,string id, string speciality, string fee, string location)
         {
             DoctorDL Dr = new DoctorDL();
-            bool D = Dr.Docverify(name, speciality, fee, location);
+            bool D = Dr.Docverify(name,id, speciality, fee, location);
             return D;
         }
         public List<Doctor> SearchDoc(string speciality, string location, string fee)

@@ -92,5 +92,26 @@ namespace Medicall_Forms
             s.Show();
             this.Hide();
         }
+
+        private void linkLabel11_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AllDonors d = new AllDonors();
+            d.Show();
+            this.Hide();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
+        }
+
+        private void linkLabel12_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
+        }
     }
 }

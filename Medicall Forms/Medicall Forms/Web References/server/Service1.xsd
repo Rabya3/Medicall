@@ -17,6 +17,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Day" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Fee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Specialization" nillable="true" type="xs:string" />
@@ -38,4 +39,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Lab" nillable="true" type="tns:Lab" />
+  <xs:complexType name="ArrayOfblood">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="blood" nillable="true" type="tns:blood" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfblood" nillable="true" type="tns:ArrayOfblood" />
+  <xs:complexType name="blood">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="blood" nillable="true" type="tns:blood" />
 </xs:schema>

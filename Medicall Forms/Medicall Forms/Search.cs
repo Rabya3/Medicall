@@ -71,5 +71,12 @@ namespace Medicall_Forms
         {
 
         }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Medinfo m = Medinfo.getinstance();
+            m.Show();
+            this.Hide();
+        }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,19 +52,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Dnametxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.idtxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel3.Location = new System.Drawing.Point(534, 22);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(49, 18);
-            this.linkLabel3.TabIndex = 70;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Home";
             // 
             // label4
             // 
@@ -367,12 +357,47 @@
             this.label11.TabIndex = 99;
             this.label11.Text = "Name  👨";
             // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel4.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel4.Location = new System.Drawing.Point(700, 108);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(77, 24);
+            this.linkLabel4.TabIndex = 100;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Log Out";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked_1);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Navy;
+            this.label14.Location = new System.Drawing.Point(292, 350);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(27, 23);
+            this.label14.TabIndex = 127;
+            this.label14.Text = "Id";
+            // 
+            // idtxt
+            // 
+            this.idtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idtxt.Location = new System.Drawing.Point(287, 379);
+            this.idtxt.Name = "idtxt";
+            this.idtxt.Size = new System.Drawing.Size(183, 26);
+            this.idtxt.TabIndex = 126;
+            // 
             // Updateinfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(795, 500);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.idtxt);
+            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Dnametxt);
             this.Controls.Add(this.label13);
@@ -392,7 +417,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -407,8 +431,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -433,5 +455,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox Dnametxt;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox idtxt;
     }
 }

@@ -34,6 +34,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="answer" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="speciality" nillable="true" type="xs:string" />
@@ -138,6 +139,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="speciality" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
@@ -190,6 +192,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="speciality" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
@@ -210,6 +213,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="speciality" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="fee" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
@@ -363,6 +367,18 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="DelLabResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Showallblood">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowallbloodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowallbloodResult" nillable="true" type="q9:ArrayOfblood" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
