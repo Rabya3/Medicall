@@ -59,5 +59,18 @@ namespace WcfService1
             }
             return LabL;
         }
+        public bool DelLab(string username, string location)
+        {
+            bool valid = false;
+            foreach (Lab u in LabDL.LV)
+            {
+                if (u.Name == username && u.Location == location)
+                {
+                    LV.Remove(u);
+                    valid = true;
+                }
+            }
+            return valid;
+        }
     }
 }

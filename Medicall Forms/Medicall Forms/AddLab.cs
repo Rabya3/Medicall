@@ -36,7 +36,20 @@ namespace Medicall_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool validuser;
+            bool passed;
+            server.Service1 server = new server.Service1();
+            server.DelLab(Dnametxt.Text, locationtxt.Text, out validuser, out passed);
+            if (validuser == true)
+            {
+                MessageBox.Show("Sucessfully DELETED");
 
+            }
+            else
+            {
+                MessageBox.Show("Invalid");
+
+            }
         }
     }
 }

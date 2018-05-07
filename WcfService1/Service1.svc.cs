@@ -71,7 +71,7 @@ namespace WcfService1
             bool Pt = P.Preset(username, question, answer, password);
             return Pt;
         }
-      
+
         public bool Updateinfo(string username, string phone, string speciality, string location, string time, string day, string fee)
         {
             DoctorDL Dr = new DoctorDL();
@@ -89,7 +89,7 @@ namespace WcfService1
         public bool Aregister(string username, string password)
         {
             AdminDL Dr = new AdminDL();
-            bool D = Dr.Aregister(username,password);
+            bool D = Dr.Aregister(username, password);
             return D;
         }
         public bool AddDoctor(string username, string phone, string speciality, string location, string time, string day, string fee)
@@ -110,10 +110,10 @@ namespace WcfService1
             List<Doctor> D = Dr.SearchDoc(speciality, location, fee);
             return D;
         }
-        public bool Labverify(string name,string location)
+        public bool Labverify(string name, string location)
         {
             LabDL Dr = new LabDL();
-            bool D = Dr.Labverify(name,location);
+            bool D = Dr.Labverify(name, location);
             return D;
         }
         public List<Lab> SearchLab(string Area)
@@ -150,6 +150,25 @@ namespace WcfService1
         {
             LabDL D = new LabDL();
             List<Lab> Dr = D.ShowLab();
+            return Dr;
+
+        }
+        public bool DelD(string username, string speciality)
+        {
+            DoctorDL D = new DoctorDL();
+            bool Dr = D.DelD(username, speciality);
+            return Dr;
+        }
+        public bool DelLab(string username, string location)
+        {
+            LabDL D = new LabDL();
+            bool Dr = D.DelLab(username, location);
+            return Dr;
+        }
+        public List<blood> Showallblood()
+        {
+            bloodreg D = new bloodreg();
+            List<blood> Dr = D.Showallblood();
             return Dr;
 
         }

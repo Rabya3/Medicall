@@ -59,6 +59,13 @@ namespace WcfService1
         List<Lab> SearchLabAdmin(string location);
         [OperationContract]
         List<Lab> ShowLab();
+        [OperationContract]
+        bool DelD(string username, string speciality);
+        [OperationContract]
+        bool DelLab(string username, string speciality);
+        [OperationContract]
+        List<blood> Showallblood();
+
 
 
 

@@ -70,6 +70,7 @@ namespace WcfService1
             u.Time = time;
             u.Day = day;
             u.Fee = fee;
+            DoctorDL.Doc.Add(u);
            return true;
         }
 
@@ -132,6 +133,19 @@ namespace WcfService1
                 }
             }
             return DocL;
+        }
+        public bool DelD(string username, string speciality)
+        {
+            bool valid = false;
+            foreach (Doctor u in DoctorDL.DocV)
+            {
+                if (u.Username == username && u.Specialization == speciality)
+                {
+                    DocV.Remove(u);
+                    valid = true;
+                }
+            }
+            return valid;
         }
 
 

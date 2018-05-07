@@ -19,6 +19,15 @@ namespace WcfService1
             bloodreg.bl.Add(B);
             return true;
         }
-
+        public List<blood> Showallblood()
+        {
+            List<blood> LabList = new List<blood>();
+            foreach (blood u in bl)
+            {
+                    bl.Add(u);
+             
+            }
+            return bl;
+        }
     }
 }

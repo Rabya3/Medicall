@@ -69,7 +69,27 @@ namespace Medicall_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            bool validuser;
+            bool passed;
+            server.Service1 server = new server.Service1();
+            server.DelD(Dnametxt.Text,specialtxt.Text, out validuser, out passed);
+            if (validuser == true)
+            {
+                MessageBox.Show("Sucessfully DELETED");
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid");
+
+            }
+            Dnametxt.Text = "";
+            phonetxt.Text = "";
+            specialtxt.Text = "";
+            locationtxt.Text = "";
+            timingstxt.Text = "";
+            feetxt.Text = "";
+            daytxt.Text = "";
         }
     }
 }
