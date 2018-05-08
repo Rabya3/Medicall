@@ -149,3 +149,41 @@ C:\Users\Luqman\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medical
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.ShowLAb.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.SLabAdmin.resources
 C:\Users\rabya\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.AllDonors.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\Medicall Forms.exe
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\Medicall Forms.pdb
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\mscorlib.dll
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\System.Net.Http.dll
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\System.Net.Http.xml
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\normidna.nlp
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\normnfc.nlp
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\normnfd.nlp
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\normnfkc.nlp
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\bin\Debug\normnfkd.nlp
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.csprojResolveAssemblyReference.cache
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.About.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.adddoc.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.AddLab.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.admin.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.adminfunc.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.AllDonors.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.blood.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.contact.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.FindLab.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Medinfo.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Search.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.SearchAdminDoc.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.showDoc.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.ShowLAb.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.SLabAdmin.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Updateinfo.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Drlogin.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.DrReg.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Form1.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Patregister.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Preset.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Properties.Resources.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Plogin.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Dreset.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.VerifyDoc.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.VerifyL.resources
+C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.csproj.GenerateResource.Cache

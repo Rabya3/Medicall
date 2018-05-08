@@ -62,5 +62,12 @@ namespace Medicall_Forms
         {
 
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
+        }
     }
 }

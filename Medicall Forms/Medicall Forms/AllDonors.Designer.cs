@@ -122,21 +122,22 @@
             // 
             this.button1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(561, 111);
+            this.button1.Location = new System.Drawing.Point(57, 163);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 50);
             this.button1.TabIndex = 163;
             this.button1.Text = "Show All";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 190);
+            this.dataGridView1.Location = new System.Drawing.Point(239, 202);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(614, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(288, 122);
             this.dataGridView1.TabIndex = 162;
             // 
             // linkLabel4

@@ -32,11 +32,7 @@ namespace Medicall_Forms
             bool isvalid;
             bool passed;
            
-           if(Dpasstxt.TextLength<6)
-            {
-                MessageBox.Show("Password should be at least 6 characters");
-            }
-            else if (checkBox1.Checked)
+             if (checkBox1.Checked)
             {
             server.Service1 server = new server.Service1();
             server.Dregister(Dnametxt.Text, Dpasstxt.Text,idtxt.Text, DcomboBox1.Text, Danstxt.Text,specialtxt.Text,phonetxt.Text,locationtxt.Text,feetxt.Text,timingstxt.Text,daytxt.Text, out isvalid, out passed);
@@ -63,6 +59,7 @@ namespace Medicall_Forms
             daytxt.Text = " ";
             phonetxt.Text = "";
             timingstxt.Text = "";
+            idtxt.Text = "";
             
             checkBox1.Checked = false;
                 

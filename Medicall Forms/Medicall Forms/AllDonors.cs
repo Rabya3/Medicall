@@ -23,5 +23,14 @@ namespace Medicall_Forms
             f.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            server.Service1 Oserver = new server.Service1();
+            List<server.blood> list = Oserver.Showallblood().ToList<server.blood>();
+            BindingSource S = new BindingSource();
+            S.DataSource = list;
+            dataGridView1.DataSource = S;
+        }
     }
 }

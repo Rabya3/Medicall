@@ -143,9 +143,9 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.Location = new System.Drawing.Point(18, 260);
+            this.dataGridView1.Location = new System.Drawing.Point(52, 261);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(672, 191);
+            this.dataGridView1.Size = new System.Drawing.Size(306, 154);
             this.dataGridView1.TabIndex = 156;
             // 
             // button1
@@ -154,7 +154,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(297, 200);
+            this.button1.Location = new System.Drawing.Point(306, 145);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 43);
             this.button1.TabIndex = 155;
