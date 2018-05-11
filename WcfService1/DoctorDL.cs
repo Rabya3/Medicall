@@ -151,7 +151,18 @@ namespace WcfService1
             }
             return valid;
         }
-      
 
+        public Doctor appoint(string d)
+        {
+            foreach (Doctor D in DocV)
+            {
+                if (D.Username == d) 
+                {
+                    return D;
+                }
+            }
+            return null;
+
+        }
     }
 }

@@ -29,6 +29,13 @@ namespace WcfService1
             }
             return composite;
         }
+        public Doctor appoint(string d)
+        {
+            DoctorDL D = new DoctorDL();
+            Doctor s=D.appoint(d);
+            return s;
+        }
+
 
         public bool Dregister(string username, string password,string id, string question, string answer, string speciality, string phone, string location, string fee, string time, string day)
         {

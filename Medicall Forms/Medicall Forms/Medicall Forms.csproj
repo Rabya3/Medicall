@@ -84,6 +84,12 @@
     <Compile Include="AllDonors.Designer.cs">
       <DependentUpon>AllDonors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment.Designer.cs">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="blood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,7 @@
     <Compile Include="Dreset.Designer.cs">
       <DependentUpon>Dreset.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility.cs" />
     <Compile Include="VerifyDoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllDonors.resx">
       <DependentUpon>AllDonors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment.resx">
+      <DependentUpon>Appointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="blood.resx">
       <DependentUpon>blood.cs</DependentUpon>

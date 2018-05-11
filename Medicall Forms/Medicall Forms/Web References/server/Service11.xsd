@@ -53,6 +53,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="appoint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="d" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="appointResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="appointResult" nillable="true" type="q3:Doctor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Drisvalid">
     <xs:complexType>
       <xs:sequence>
@@ -239,7 +253,7 @@
   <xs:element name="SearchDocResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchDocResult" nillable="true" type="q3:ArrayOfDoctor" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchDocResult" nillable="true" type="q4:ArrayOfDoctor" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -253,7 +267,7 @@
   <xs:element name="SearchLabResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchLabResult" nillable="true" type="q4:ArrayOfLab" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchLabResult" nillable="true" type="q5:ArrayOfLab" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -295,7 +309,7 @@
   <xs:element name="ShowDocResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowDocResult" nillable="true" type="q5:ArrayOfDoctor" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowDocResult" nillable="true" type="q6:ArrayOfDoctor" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -310,7 +324,7 @@
   <xs:element name="SearchDocAdminResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchDocAdminResult" nillable="true" type="q6:ArrayOfDoctor" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchDocAdminResult" nillable="true" type="q7:ArrayOfDoctor" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -324,7 +338,7 @@
   <xs:element name="SearchLabAdminResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchLabAdminResult" nillable="true" type="q7:ArrayOfLab" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="SearchLabAdminResult" nillable="true" type="q8:ArrayOfLab" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -336,7 +350,7 @@
   <xs:element name="ShowLabResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowLabResult" nillable="true" type="q8:ArrayOfLab" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowLabResult" nillable="true" type="q9:ArrayOfLab" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -378,7 +392,7 @@
   <xs:element name="ShowallbloodResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowallbloodResult" nillable="true" type="q9:ArrayOfblood" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="ShowallbloodResult" nillable="true" type="q10:ArrayOfblood" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -187,3 +187,5 @@ C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall
 C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.VerifyDoc.resources
 C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.VerifyL.resources
 C:\Users\Track\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall Forms.csproj.GenerateResource.Cache
+C:\Users\Luqman\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.AllDonors.resources
+C:\Users\Luqman\Desktop\Medicall\Medicall Forms\Medicall Forms\obj\Debug\Medicall_Forms.Appointment.resources

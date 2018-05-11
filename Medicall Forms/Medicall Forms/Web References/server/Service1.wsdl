@@ -25,6 +25,12 @@
   <wsdl:message name="IService1_Dregister_OutputMessage">
     <wsdl:part name="parameters" element="tns:DregisterResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_appoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:appoint" />
+  </wsdl:message>
+  <wsdl:message name="IService1_appoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:appointResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_Drisvalid_InputMessage">
     <wsdl:part name="parameters" element="tns:Drisvalid" />
   </wsdl:message>
@@ -164,6 +170,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Dregister" message="tns:IService1_Dregister_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/DregisterResponse" message="tns:IService1_Dregister_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="appoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/appoint" message="tns:IService1_appoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/appointResponse" message="tns:IService1_appoint_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Drisvalid">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Drisvalid" message="tns:IService1_Drisvalid_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/DrisvalidResponse" message="tns:IService1_Drisvalid_OutputMessage" />
@@ -271,6 +281,15 @@
     </wsdl:operation>
     <wsdl:operation name="Dregister">
       <soap:operation soapAction="http://tempuri.org/IService1/Dregister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="appoint">
+      <soap:operation soapAction="http://tempuri.org/IService1/appoint" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

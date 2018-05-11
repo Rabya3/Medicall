@@ -44,9 +44,10 @@ namespace Medicall_Forms
         server.Doctor Doc;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Doc = list[e.RowIndex];
-            string tme = Doc.Time;
-            MessageBox.Show("Meet doctor at ", tme);
+            server.Doctor doct = list[e.RowIndex];
+            Utility.doc = doct.Username;
+            Appointment a = new Appointment();
+            a.Show();
         }
 
         private void locationtxt_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace Medicall_Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void specialtxt_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,6 +90,11 @@ namespace Medicall_Forms
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

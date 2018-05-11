@@ -21,12 +21,6 @@ namespace WcfService1
         }
         public List<blood> Showallblood()
         {
-            List<blood> LabList = new List<blood>();
-            foreach (blood u in bl)
-            {
-                    bl.Add(u);
-             
-            }
             return bl;
         }
     }

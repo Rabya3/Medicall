@@ -7,12 +7,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
-  <xs:complexType name="ArrayOfDoctor">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Doctor" nillable="true" type="tns:Doctor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDoctor" nillable="true" type="tns:ArrayOfDoctor" />
   <xs:complexType name="Doctor">
     <xs:sequence>
       <xs:element minOccurs="0" name="Day" nillable="true" type="xs:string" />
@@ -26,6 +20,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Doctor" nillable="true" type="tns:Doctor" />
+  <xs:complexType name="ArrayOfDoctor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Doctor" nillable="true" type="tns:Doctor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDoctor" nillable="true" type="tns:ArrayOfDoctor" />
   <xs:complexType name="ArrayOfLab">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Lab" nillable="true" type="tns:Lab" />

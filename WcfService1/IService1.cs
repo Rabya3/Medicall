@@ -23,6 +23,9 @@ namespace WcfService1
         bool Dregister(string username, string password,string id, string question, string answer, string speciality, string phone, string location, string fee, string time, string day);
 
         [OperationContract]
+        Doctor appoint(string d);
+
+        [OperationContract]
         bool Drisvalid(string username, string password);
 
         [OperationContract]
